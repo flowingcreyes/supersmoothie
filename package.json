@@ -1,0 +1,32 @@
+{
+  "name": "supersmoothie",
+  "version": "1.0.0",
+  "description": "A web app that gives you a delicious smoothie recipe based on your favorite fruit!",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "set NODE_ENV=test&& jasmine",
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.2",
+    "express-validator": "^6.1.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.10.1",
+    "sequelize-cli": "^5.5.0"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "jasmine": "^3.4.0",
+    "request": "^2.88.0"
+  }
+}
