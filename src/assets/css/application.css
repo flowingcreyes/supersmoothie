@@ -1,62 +1,65 @@
-body{
+body {
   background-image: url("../image/background.jpg");
   background-size: cover;
- background-repeat: no-repeat;
- background-attachment: fixed;
- font-family: 'Roboto', sans-serif;
- width:100%;
-
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
 }
-.title{
+a:visited {
+  color: #f2f2f2;
+}
+.title {
   text-align: center;
-color: #f2f2f2;
+  color: #f2f2f2;
   font-size: 60px;
   font-weight: bold;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
- }
-.navigation{
-  bottom: 35px;
-  position: relative;
- left: 65%;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-size: 29px;
-font-weight: bold;
-color: #f2f2f2;
-text-decoration:  underline;
-padding-bottom: 20px;
-display: inline-block;
-margin-right: 12px;
-
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
-.yousmoothie{
+.navigation {
+  bottom: 45px;
+  position: relative;
+  left: 65%;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 29px;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-decoration: underline;
+  padding-bottom: 20px;
+  display: inline-block;
+  margin-right: 12px;
+}
+.yousmoothie {
   overflow: hidden;
   width: 20%;
- height: 35%;
- position: absolute;
- top: 50%;
- left: 18%;
- transform: translate(-53%, -70%);
- padding: 10px;
- border-radius: 20px;
- border: solid black;
- background-color:  #f2f2f2;
- margin: 55px;
+  height: 35%;
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid black;
+  background-color: #f2f2f2;
+  margin: 55px;
 }
-.smoothieshare{
+.smoothieshare {
   width: 20%;
- height: 35%;
- position: absolute;
- top: 50%;
- left: 82%;
- transform: translate(-53%, -70%);
- padding: 10px;
- border-radius: 20px;
- border: solid black;
- overflow: hidden;
- background-color:  #f2f2f2;
- margin: 55px;
+  height: 35%;
+  position: absolute;
+  top: 50%;
+  left: 82%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid black;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  margin: 55px;
 }
-.smoothiemonth{
+.smoothiemonth {
   width: 33%;
   height: 60%;
   position: absolute;
@@ -67,6 +70,6 @@ margin-right: 12px;
   border-radius: 20px;
   border: solid black;
   overflow: hidden;
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
   margin: 60px;
 }

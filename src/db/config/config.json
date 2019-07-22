@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "bloc98",
+    "database": "supersmoothie-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "test": {
+    "username": "postgres",
+    "password": "bloc98",
+    "database": "supersmoothie-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "production": {
+    "username": "postgres",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "logging": false
+  }
+}

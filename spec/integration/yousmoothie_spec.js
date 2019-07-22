@@ -2,11 +2,11 @@ const request = require("request");
 const server = require("../../src/server.js");
 const base = "http://localhost:3000/";
 
-describe("routes:static", () => {
-  describe("GET /", () => {
-    it("will return status code of 200", done => {
+describe("routes:yousmoothie", () => {
+  describe("GET /yousmoothie", () => {
+    it("will return a successful route", done => {
       request.get(base, (err, res, body) => {
-        expect(res.statusCode).toBe(200);
+        expect(err).toBeNull();
         done();
       });
     });
