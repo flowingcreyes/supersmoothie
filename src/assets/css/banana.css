@@ -1,0 +1,14 @@
+.bananaSmoothie {
+  width: 33%;
+  height: 60%;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
+  background-color: pink;
+  margin: 60px;
+}

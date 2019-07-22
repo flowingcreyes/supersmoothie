@@ -1,17 +1,17 @@
 body {
-  background-image: url("../image/background.jpg");
+  background-color: pink;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Roboto", sans-serif;
+  font-family: "Verdana";
   width: 100%;
 }
 a:visited {
-  color: #f2f2f2;
+  color: white;
 }
 .title {
   text-align: center;
-  color: #f2f2f2;
+  color: white;
   font-size: 60px;
   font-weight: bold;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -25,7 +25,7 @@ a:visited {
     1px 1px 0 #000;
   font-size: 29px;
   font-weight: bold;
-  color: #f2f2f2;
+  color: white;
   text-decoration: underline;
   padding-bottom: 20px;
   display: inline-block;
@@ -41,8 +41,8 @@ a:visited {
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: solid black;
-  background-color: #f2f2f2;
+  border: solid white;
+  background-color: pink;
   margin: 55px;
 }
 .smoothieshare {
@@ -54,9 +54,9 @@ a:visited {
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: solid black;
+  border: solid white;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: pink;
   margin: 55px;
 }
 .smoothiemonth {
@@ -68,8 +68,8 @@ a:visited {
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: solid black;
+  border: solid white;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: pink;
   margin: 60px;
 }

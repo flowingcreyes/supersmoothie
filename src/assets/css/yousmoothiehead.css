@@ -1,44 +1,44 @@
 .smaller-title {
-color: #f2f2f2;
-font-weight: bold;
-font-size: 45px;
-text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
- 1px 1px 0 #000;
- top: 13%;
-right: 43%;
- position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  top: 13%;
+  right: 43%;
+  position: absolute;
 }
 .blueberry {
-width: 17%;
-height: 30%;
-position: absolute;
-background:  url("../image/blueberries.jpg");
-background-repeat: no-repeat;
-top: 50%;
-left: 15%;
-transform: translate(-53%, -70%);
-padding: 10px;
-border-radius: 20px;
-border: dotted black;
-overflow: hidden;
-}
-.banana{
   width: 17%;
   height: 30%;
   position: absolute;
-  background:  url("../image/bananas.jpg");
-background-repeat: no-repeat;
- top: 50%;
+  background: url("../image/blueberries.jpg");
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 15%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: dotted white;
+  overflow: hidden;
+}
+.banana {
+  width: 17%;
+  height: 30%;
+  position: absolute;
+  background: url("../image/bananas.jpg");
+  background-repeat: no-repeat;
+  top: 50%;
   left: 52%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: dotted black;
+  border: dotted white;
   overflow: hidden;
 }
-.strawberry{
+.strawberry {
   width: 17%;
-  background:  url("../image/strawberries.jpg");
+  background: url("../image/strawberries.jpg");
   background-repeat: no-repeat;
   height: 30%;
   position: absolute;
@@ -49,6 +49,6 @@ background-repeat: no-repeat;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: dotted black;
+  border: dotted white;
   overflow: hidden;
 }
