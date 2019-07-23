@@ -5,7 +5,7 @@
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   top: 13%;
-  right: 43%;
+  right: 42%;
   position: absolute;
 }
 .blueberry {
@@ -42,7 +42,6 @@
   background-repeat: no-repeat;
   height: 30%;
   position: absolute;
-  color: red;
   top: 50%;
   left: 86%;
   margin-right: 10px;

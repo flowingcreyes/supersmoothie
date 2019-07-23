@@ -1,14 +1,75 @@
-.blueberrySmoothie {
-  width: 33%;
-  height: 60%;
+blueberrySmoothie-name{
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 35px;
+  width: 32%;
+  height: 45%;
   position: absolute;
-  top: 56%;
-  left: 50%;
+  top: 47%;
+  left: 56%;
+  transform: translate(-53%, -70%);
+  margin: 55px;
+}
+blueberrySmoothie-ingredients{
+  overflow: hidden;
+  font-weight: bold;
+  border-radius: 20px;
+  border: solid white;
+  max-height: 37%;
+  overflow: auto;
+  background-color: white;
+  width: 20%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 25%;
   transform: translate(-53%, -70%);
   padding: 10px;
+}
+blueberrySmoothie-recipe {
+  overflow: hidden;
+  font-weight: bold;
+  border-radius: 20px;
+  border: solid white;
+  max-height: 37%;
+  overflow: auto;
+  background-color: white;
+  width: 20%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+
+}
+.#ccffe6
+blueberrySmoothie-calories {
+  overflow: hidden;
+  font-weight: bold;
   border-radius: 20px;
   border: solid white;
   overflow: hidden;
-  background-color: pink;
-  margin: 60px;
+  background-color: white;
+  width: 13%;
+  height: auto;
+  position: absolute;
+  top: 70%;
+  left: 48%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  margin: 55px;
+}
+blueberrySmoothie-image {
+max-height: 37%;
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
+  width: 15%;
+  height: auto;
+  position: absolute;
+  top: 52%;
+  left: 48%;
+  transform: translate(-53%, -70%);
+  margin: 50px;
 }

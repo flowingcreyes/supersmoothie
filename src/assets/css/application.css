@@ -1,5 +1,6 @@
 body {
-  background-color: pink;
+  background-color: #ccffe6
+;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,6 +12,7 @@ a:visited {
 }
 .title {
   text-align: center;
+  left: 50%;
   color: white;
   font-size: 60px;
   font-weight: bold;
@@ -20,7 +22,7 @@ a:visited {
 .navigation {
   bottom: 45px;
   position: relative;
-  left: 65%;
+  left: 60%;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   font-size: 29px;
@@ -36,27 +38,27 @@ a:visited {
   width: 20%;
   height: 35%;
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 18%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
   border: solid white;
-  background-color: pink;
+  background-color: white;
   margin: 55px;
 }
 .smoothieshare {
   width: 20%;
   height: 35%;
   position: absolute;
-  top: 50%;
-  left: 82%;
+  top: 49%;
+  left: 78%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
   border: solid white;
   overflow: hidden;
-  background-color: pink;
+  background-color: white;
   margin: 55px;
 }
 .smoothiemonth {
@@ -64,12 +66,13 @@ a:visited {
   height: 60%;
   position: absolute;
   top: 56%;
-  left: 50%;
+  left: 48%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
   border: solid white;
   overflow: hidden;
-  background-color: pink;
+  background-color: #ccffe6
+;
   margin: 60px;
 }
