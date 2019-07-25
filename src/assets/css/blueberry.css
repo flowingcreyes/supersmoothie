@@ -1,4 +1,4 @@
-blueberrySmoothie-name{
+.blueberrySmoothie-name{
   overflow: hidden;
   font-weight: bold;
   font-size: 35px;
@@ -10,7 +10,7 @@ blueberrySmoothie-name{
   transform: translate(-53%, -70%);
   margin: 55px;
 }
-blueberrySmoothie-ingredients{
+.blueberrySmoothie-ingredients{
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -26,7 +26,7 @@ blueberrySmoothie-ingredients{
   transform: translate(-53%, -70%);
   padding: 10px;
 }
-blueberrySmoothie-recipe {
+.blueberrySmoothie-recipe {
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -43,8 +43,7 @@ blueberrySmoothie-recipe {
   padding: 10px;
 
 }
-.#ccffe6
-blueberrySmoothie-calories {
+.blueberrySmoothie-calories {
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -60,7 +59,7 @@ blueberrySmoothie-calories {
   padding: 10px;
   margin: 55px;
 }
-blueberrySmoothie-image {
+.blueberrySmoothie-image {
 max-height: 37%;
   border-radius: 20px;
   border: solid white;

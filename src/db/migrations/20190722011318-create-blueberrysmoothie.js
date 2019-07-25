@@ -11,8 +11,11 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      ingredients: {
+        type: Sequelize.TEXT
+      },
       recipe: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       calories: {
         type: Sequelize.STRING

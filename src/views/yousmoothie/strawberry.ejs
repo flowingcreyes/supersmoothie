@@ -14,17 +14,20 @@
   <div class="smaller-title">
     YouSmoothie
   </div>
-    <div class="strawberrySmoothie-name">
-      <%= strawberrySmoothies.name %>
-    </div>
-
-      <div class="strawberrySmoothie-recipe">
-
-      <%= strawberrySmoothies.recipe %>
-    </div>
-    <div class="strawberrySmoothie-calories">
-      <%= strawberrySmoothies.calories %>
+  <div class="strawberrySmoothie-name">
+    <%= strawberrySmoothies.name %>
+  </div>
+<div class="strawberrySmoothie-ingredients">
+  <p>Ingredients</p>
+  <%= strawberrySmoothies.ingredients %>
 </div>
-
+    <div class="strawberrySmoothie-recipe">
+<p>Recipe</p>
+    <%= strawberrySmoothies.recipe %>
+  </div>
+  <div class="strawberrySmoothie-calories">
+    <%= strawberrySmoothies.calories %>
+</div>
+<img src=<%= strawberrySmoothies.source %> class="strawberrySmoothie-image" alt="strawberry smoothie image">
 </body>
 </html>

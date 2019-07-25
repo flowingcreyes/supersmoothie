@@ -4,8 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     "bananasmoothie",
     {
       name: DataTypes.STRING,
-      ingredients: DataTypes.STRING(400),
-      recipe: DataTypes.STRING(600),
+      ingredients: DataTypes.TEXT,
+      recipe: DataTypes.TEXT,
       calories: DataTypes.STRING,
       source: DataTypes.STRING
     },

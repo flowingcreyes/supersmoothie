@@ -12,10 +12,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       ingredients: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       recipe: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       calories: {
         type: Sequelize.STRING
