@@ -1,7 +1,5 @@
 const blueberrySmoothies = require("./models").blueberrysmoothie;
 const sequelize = require("../../src/db/models/index").sequelize;
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = {
   retrieveBlueberrySmoothies(callback) {
