@@ -39,6 +39,7 @@ describe("routes:yousmoothie", () => {
     it("will return a successful route", done => {
       request.get(`${base}strawberry`, (err, res, body) => {
         expect(err).toBeNull();
+        expect()
         done();
       });
     });
