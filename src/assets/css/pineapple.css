@@ -1,4 +1,4 @@
-.blueberrySmoothie-name {
+.pineappleSmoothie-name {
   overflow: hidden;
   font-weight: bold;
   font-size: 35px;
@@ -10,7 +10,7 @@
   transform: translate(-53%, -70%);
   margin: 55px;
 }
-.blueberrySmoothie-ingredients {
+.pineappleSmoothie-ingredients {
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -26,7 +26,7 @@
   transform: translate(-53%, -70%);
   padding: 10px;
 }
-.blueberrySmoothie-recipe {
+.pineappleSmoothie-recipe {
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -42,7 +42,7 @@
   transform: translate(-53%, -70%);
   padding: 10px;
 }
-.blueberrySmoothie-calories {
+.pineappleSmoothie-calories {
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -58,7 +58,7 @@
   padding: 10px;
   margin: 55px;
 }
-.blueberrySmoothie-image {
+.pineappleSmoothie-image {
   max-height: 37%;
   border-radius: 20px;
   border: solid white;

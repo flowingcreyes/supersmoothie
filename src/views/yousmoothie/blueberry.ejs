@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <% include ../static/partials/head.ejs %>
-  <link rel="stylesheet" type="text/css" href="../../css/blueberry.css">
+    <link rel="stylesheet" type="text/css" href="../../css/blueberry.css">
 
-  <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
+    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
+
 <body>
   <header>
     <h1 class="title">Super Smoothie</h1>
   </header>
   <% include ../static/partials/navbar.ejs %>
-  <div class="smaller-title">
-    YouSmoothie
-  </div>
-  <div class="blueberrySmoothie-name">
-    <%= blueberrySmoothies.name %>
-  </div>
-<div class="blueberrySmoothie-ingredients">
-  <p>Ingredients</p>
-  <%= blueberrySmoothies.ingredients %>
-</div>
+    <div class="smaller-title">
+      YouSmoothie
+    </div>
+    <div class="blueberrySmoothie-name">
+      <%= blueberrySmoothies.name %>
+    </div>
+    <div class="blueberrySmoothie-ingredients">
+      <p>Ingredients</p>
+      <%= blueberrySmoothies.ingredients %>
+    </div>
     <div class="blueberrySmoothie-recipe">
-<p>Recipe</p>
-    <%= blueberrySmoothies.recipe %>
-  </div>
-  <div class="blueberrySmoothie-calories">
-    <%= blueberrySmoothies.calories %>
-</div>
-<img src=<%= blueberrySmoothies.source %> class="blueberrySmoothie-image" alt="blueberry smoothie image">
+      <p>Recipe</p>
+      <%= blueberrySmoothies.recipe %>
+    </div>
+    <div class="blueberrySmoothie-calories">
+      <%= blueberrySmoothies.calories %>
+    </div>
+    <img src=<%=b lueberrySmoothies.source %> class="blueberrySmoothie-image" alt="blueberry smoothie image">
 </body>
+
 </html>

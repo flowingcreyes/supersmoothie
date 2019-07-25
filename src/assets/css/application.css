@@ -1,6 +1,5 @@
 body {
-  background-color: #ccffe6
-;
+  background-color: #ccffe6;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -72,7 +71,6 @@ a:visited {
   border-radius: 20px;
   border: solid white;
   overflow: hidden;
-  background-color: #ccffe6
-;
+  background-color: #ccffe6;
   margin: 60px;
 }

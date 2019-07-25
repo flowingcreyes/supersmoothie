@@ -1,4 +1,4 @@
-.strawberrySmoothie-name{
+.strawberrySmoothie-name {
   overflow: hidden;
   font-weight: bold;
   font-size: 35px;
@@ -10,7 +10,7 @@
   transform: translate(-53%, -70%);
   margin: 55px;
 }
-.strawberrySmoothie-ingredients{
+.strawberrySmoothie-ingredients {
   overflow: hidden;
   font-weight: bold;
   border-radius: 20px;
@@ -41,7 +41,6 @@
   left: 75%;
   transform: translate(-53%, -70%);
   padding: 10px;
-
 }
 .strawberrySmoothie-calories {
   overflow: hidden;
@@ -60,7 +59,7 @@
   margin: 55px;
 }
 .strawberrySmoothie-image {
-max-height: 37%;
+  max-height: 37%;
   border-radius: 20px;
   border: solid white;
   overflow: hidden;

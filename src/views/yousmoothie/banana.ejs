@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <% include ../static/partials/head.ejs %>
-  <link rel="stylesheet" type="text/css" href="../../css/banana.css">
+    <link rel="stylesheet" type="text/css" href="../../css/banana.css">
 
-  <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
+    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
+
 <body>
   <header>
     <h1 class="title">Super Smoothie</h1>
   </header>
   <% include ../static/partials/navbar.ejs %>
-  <div class="smaller-title">
-    YouSmoothie
-  </div>
-  <div class="bananaSmoothie-name">
-    <%= bananaSmoothies.name %>
-  </div>
-<div class="bananaSmoothie-ingredients">
-  <p>Ingredients</p>
-  <%= bananaSmoothies.ingredients %>
-</div>
+    <div class="smaller-title">
+      YouSmoothie
+    </div>
+    <div class="bananaSmoothie-name">
+      <%= bananaSmoothies.name %>
+    </div>
+    <div class="bananaSmoothie-ingredients">
+      <p>Ingredients</p>
+      <%= bananaSmoothies.ingredients %>
+    </div>
     <div class="bananaSmoothie-recipe">
-<p>Recipe</p>
-    <%= bananaSmoothies.recipe %>
-  </div>
-  <div class="bananaSmoothie-calories">
-    <%= bananaSmoothies.calories %>
-</div>
-<img src=<%= bananaSmoothies.source %> class="bananaSmoothie-image" alt="banana smoothie image">
+      <p>Recipe</p>
+      <%= bananaSmoothies.recipe %>
+    </div>
+    <div class="bananaSmoothie-calories">
+      <%= bananaSmoothies.calories %>
+    </div>
+    <img src=<%=b ananaSmoothies.source %> class="bananaSmoothie-image" alt="banana smoothie image">
 </body>
+
 </html>
