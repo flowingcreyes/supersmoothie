@@ -10,15 +10,15 @@
 
 <body>
   <script>
-    function sendEmail() {
+    function sendEmail(email, smoothie) {
       const sgMail = require("@sendgrid/mail");
       sgMail.setApiKey(process.env.SENDGRID_API_KEY);
       const msg = {
-        to: newUser.email,
-        from: "donotreply@example.com",
-        subject: "Account confirmation",
-        text: "Welcome to Blocipedia!",
-        html: "<strong>Get posting!</strong>"
+        to: `${email}`,
+        from: "supersmoothie@donotreply.com",
+        subject: "SuperSmoothie",
+        text: ``,
+        html: "<strong>TEST!</strong>"
       };
       sgMail.send(msg);
     }
@@ -49,8 +49,8 @@
     </div>
 
     <div>
-      <form onsubmit="sendEmail()">
-        email: <input type="email" name="emailaddress">
+      <form onsubmit="sendEmail(document.getElementById('email').value, document.getElementsByClassName('pineappleSmoothie-name pineappleSmoothie-ingredients pineappleSmoothie-recipe pineappleSmoothie-calories').value)">
+        email: <input id="email" type="email" name="emailaddress">
         <input type="submit">
       </form>
     </div>
