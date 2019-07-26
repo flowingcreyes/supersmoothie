@@ -9,20 +9,7 @@
 </head>
 
 <body>
-  <script>
-    function sendEmail(email, smoothie) {
-      const sgMail = require("@sendgrid/mail");
-      sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-      const msg = {
-        to: `${email}`,
-        from: "supersmoothie@donotreply.com",
-        subject: "SuperSmoothie",
-        text: ``,
-        html: "<strong>TEST!</strong>"
-      };
-      sgMail.send(msg);
-    }
-  </script>
+
   <header>
     <h1 class="title">Super Smoothie</h1>
   </header>
@@ -45,15 +32,10 @@
       <%= pineappleSmoothies.calories %>
     </div>
     <div>
-      <img src=<%=p ineappleSmoothies.source %> class="pineappleSmoothie-image" alt="pineapple smoothie image">
+      <img src=<%=pineappleSmoothies.source %> class="pineappleSmoothie-image" alt="pineapple smoothie image">
     </div>
 
-    <div>
-      <form onsubmit="sendEmail(document.getElementById('email').value, document.getElementsByClassName('pineappleSmoothie-name pineappleSmoothie-ingredients pineappleSmoothie-recipe pineappleSmoothie-calories').value)">
-        email: <input id="email" type="email" name="emailaddress">
-        <input type="submit">
-      </form>
-    </div>
+
 </body>
 
 </html>
