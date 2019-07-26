@@ -30,6 +30,11 @@
       <%= bananaSmoothies.calories %>
     </div>
     <img src=<%=bananaSmoothies.source %> class="bananaSmoothie-image" alt="banana smoothie image">
+
+      <form action="/yousmoothie/smoothieemail" method="post">
+        email: <input id="email" type="email" name="emailaddress">
+        <input type="submit">
+      </form>
     </body>
 
 </html>

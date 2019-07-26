@@ -2,6 +2,8 @@ const strawberrySmoothieQueries = require("../db/queries.strawberrysmoothies.js"
 const bananaSmoothieQueries = require("../db/queries.bananasmoothies.js");
 const blueberrySmoothieQueries = require("../db/queries.blueberrysmoothies.js");
 const pineappleSmoothieQueries = require("../db/queries.pineapplesmoothies.js");
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = {
   index(req, res, next) {
@@ -51,5 +53,15 @@ module.exports = {
         }
       }
     );
+  },
+  email(req, res, next){
+        const msg = {
+              to: "cmreyesqla598@gmail.com",
+            from: "donotreply@example.com",
+            subject: "Hello!",
+              text: "Welcome to Super Smoothie!",
+              html: "<strong>Here!!</strong>"
+             };
+       sgMail.send(msg)
   }
 };
