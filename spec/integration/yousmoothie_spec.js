@@ -5,7 +5,7 @@ const bananaSmoothie = require("../../src/db/models").bananasmoothie;
 const sequelize = require("../../src/db/models/index").sequelize;
 
 describe("routes:yousmoothie", () => {
-  
+
   describe("GET /yousmoothie", () => {
     it("will return a successful route", done => {
       request.get(base, (err, res, body) => {
@@ -22,13 +22,14 @@ describe("routes:yousmoothie", () => {
         }).then(smoothie => {
           expect(smoothie.name).toBe("Peanut Butter Banana Smoothie")
           expect(smoothie.calories).toBe("335 calories per cup");
+          done();
         }).catch(err => {
           console.log(err);
-        })
-        expect(err).toBeNull();
-        expect();
-        done();
-      });
+          done();
+        });
+
+    });
+
     });
   });
 });

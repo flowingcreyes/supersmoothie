@@ -2,7 +2,7 @@
   overflow: hidden;
   font-weight: bold;
   font-size: 35px;
-  width: 32%;
+  width: 31%;
   height: 45%;
   position: absolute;
   top: 47%;
@@ -70,4 +70,9 @@
   left: 48%;
   transform: translate(-53%, -70%);
   margin: 50px;
+}
+#reload {
+  position: absolute;
+  left: 38%;
+  transform: translate(-53%, -70%);
 }

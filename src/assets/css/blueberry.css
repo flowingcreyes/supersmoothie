@@ -71,3 +71,8 @@
   transform: translate(-53%, -70%);
   margin: 50px;
 }
+#reload {
+  position: absolute;
+  left: 38%;
+  transform: translate(-53%, -70%);
+}
