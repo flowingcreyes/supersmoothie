@@ -36,19 +36,10 @@
     </div>
     <form action="/yousmoothie/smoothieemail" method="post">
       email: <input id="email" type="email" name="emailaddress">
-      <div id="smoothie_name" style="display:none;">
-        <%= pineappleSmoothies.name %>
-      </div>
-      <div id="smoothie_ingredients" style="display:none;">
-        <%= pineappleSmoothies.ingredients %>
-      </div>
-      <div id="smoothie_recipe" style="display:none;">
-        <%= pineappleSmoothies.recipe %>
-      </div>
-      <div id="smoothie_calories" style="display:none;">
-        <%= pineappleSmoothies.calories %>
-      </div>
-      <img src=<%=pineappleSmoothies.source %> style="display:none;" id = "smoothie_image" alt="pineapple smoothie image">
+      <input id="smoothie_name" name="smoothie_name" value="<%= pineappleSmoothies.name %>" type="hidden">
+      <input id="smoothie_ingredients" name="smoothie_ingredients" value= "<%= pineappleSmoothies.ingredients %>" type="hidden">
+      <input id="smoothie_recipe" name="smoothie_recipe" value= "<%= pineappleSmoothies.recipe %>" type="hidden">
+      <input id="smoothie_calories" name="smoothie_calories" value= "<%= pineappleSmoothies.calories %>" type="hidden">
       <input type="submit">
     </form>
 

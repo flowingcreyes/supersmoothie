@@ -35,6 +35,7 @@ module.exports = {
   },
 
   banana(req, res, next) {
+    console.log(req.body)
     bananaSmoothieQueries.retrieveBananaSmoothies((err, bananaSmoothies) => {
       if (err) {
         console.log(err);
@@ -61,26 +62,21 @@ module.exports = {
     let ingredients = req.body.smoothie_ingredients;
     let recipe = req.body.smoothie_recipe;
     let calories = req.body.smoothie_calories;
-    console.log(ingredients);
+    let image = req.body.smoothie_image
     const msg = {
       to: email,
       from: "supersmoothie@dontreply.com",
       subject: "Super Smoothie",
-      text: `
-              Smoothie Name: ${name}
-               Ingredients: ${ingredients}
-               Recipe: ${recipe}
-                Calories: ${calories}
-                `,
+      text:"Text",
       html: `
-      Smoothie Name: ${name}
-      Ingredients: ${ingredients}
-      Recipe: ${recipe}
-      Calories: ${calories}
+      <h2><strong>Smoothie Name:</strong> ${name}</h2><br><br>
+      <h2><strong>Ingredients:</strong> ${ingredients}</h2><br><br>
+      <h2><strong>Recipe:</strong> ${recipe}</h2><br><br>
+    <h2><strong>Calories:</strong> ${calories}</h2><br><br>
                 `
     };
-//    sgMail.send(msg).catch(err => {
-  //    console.log(err);
-//    });
+    sgMail.send(msg).catch(err => {
+      console.log(err);
+    });
   }
 };

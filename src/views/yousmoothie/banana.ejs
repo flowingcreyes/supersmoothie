@@ -34,10 +34,10 @@
 
     <form action="/yousmoothie/smoothieemail" method="post">
       email: <input id="email" type="email" name="emailaddress">
-      <input id="smoothie_name" name="smoothie_name" value=<%=bananaSmoothies.name %> type="hidden">
-      <input id="smoothie_ingredients" name="smoothie_ingredients" value=<%=bananaSmoothies.ingredients %> type="hidden">
-      <input id="smoothie_recipe" name="smoothie_recipe" value=<%=bananaSmoothies.recipe %> type="hidden">
-      <input id="smoothie_calories" name="smoothie_calories" value=<%=bananaSmoothies.calories %> type="hidden">
+      <input id="smoothie_name" name="smoothie_name" value="<%= bananaSmoothies.name %>" type="hidden">
+      <input id="smoothie_ingredients" name="smoothie_ingredients" value= "<%= bananaSmoothies.ingredients %>" type="hidden">
+      <input id="smoothie_recipe" name="smoothie_recipe" value= "<%= bananaSmoothies.recipe %>" type="hidden">
+      <input id="smoothie_calories" name="smoothie_calories" value= "<%= bananaSmoothies.calories %>" type="hidden">
       <input type="submit">
     </form>
 </body>
