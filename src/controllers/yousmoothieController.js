@@ -37,6 +37,7 @@ module.exports = {
   banana(req, res, next) {
     bananaSmoothieQueries.retrieveBananaSmoothies((err, bananaSmoothies) => {
       if (err) {
+        console.log(err);
         res.redirect(500, "/");
       } else {
         res.render("yousmoothie/banana", { bananaSmoothies });
@@ -54,14 +55,32 @@ module.exports = {
       }
     );
   },
-  email(req, res, next){
-        const msg = {
-              to: "cmreyesqla598@gmail.com",
-            from: "donotreply@example.com",
-            subject: "Hello!",
-              text: "Welcome to Super Smoothie!",
-              html: "<strong>Here!!</strong>"
-             };
-       sgMail.send(msg)
+  email(req, res, next) {
+    let email = req.body.emailaddress;
+    let name = req.body.smoothie_name;
+    let ingredients = req.body.smoothie_ingredients;
+    let recipe = req.body.smoothie_recipe;
+    let calories = req.body.smoothie_calories;
+    console.log(ingredients);
+    const msg = {
+      to: email,
+      from: "supersmoothie@dontreply.com",
+      subject: "Super Smoothie",
+      text: `
+              Smoothie Name: ${name}
+               Ingredients: ${ingredients}
+               Recipe: ${recipe}
+                Calories: ${calories}
+                `,
+      html: `
+      Smoothie Name: ${name}
+      Ingredients: ${ingredients}
+      Recipe: ${recipe}
+      Calories: ${calories}
+                `
+    };
+//    sgMail.send(msg).catch(err => {
+  //    console.log(err);
+//    });
   }
 };

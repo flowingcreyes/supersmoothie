@@ -17,24 +17,40 @@
     <div class="smaller-title">
       YouSmoothie
     </div>
-    <div class="pineappleSmoothie-name">
+    <div class="pineappleSmoothie_name">
       <%= pineappleSmoothies.name %>
     </div>
-    <div class="pineappleSmoothie-ingredients">
+    <div class="pineappleSmoothie_ingredients">
       <p>Ingredients</p>
       <%= pineappleSmoothies.ingredients %>
     </div>
-    <div class="pineappleSmoothie-recipe">
+    <div class="pineappleSmoothie_recipe">
       <p>Recipe</p>
       <%= pineappleSmoothies.recipe %>
     </div>
-    <div class="pineappleSmoothie-calories">
+    <div class="pineappleSmoothie_calories">
       <%= pineappleSmoothies.calories %>
     </div>
     <div>
-      <img src=<%=pineappleSmoothies.source %> class="pineappleSmoothie-image" alt="pineapple smoothie image">
+      <img src=<%=pineappleSmoothies.source %> class="pineappleSmoothie_image" alt="pineapple smoothie image">
     </div>
-
+    <form action="/yousmoothie/smoothieemail" method="post">
+      email: <input id="email" type="email" name="emailaddress">
+      <div id="smoothie_name" style="display:none;">
+        <%= pineappleSmoothies.name %>
+      </div>
+      <div id="smoothie_ingredients" style="display:none;">
+        <%= pineappleSmoothies.ingredients %>
+      </div>
+      <div id="smoothie_recipe" style="display:none;">
+        <%= pineappleSmoothies.recipe %>
+      </div>
+      <div id="smoothie_calories" style="display:none;">
+        <%= pineappleSmoothies.calories %>
+      </div>
+      <img src=<%=pineappleSmoothies.source %> style="display:none;" id = "smoothie_image" alt="pineapple smoothie image">
+      <input type="submit">
+    </form>
 
 </body>
 

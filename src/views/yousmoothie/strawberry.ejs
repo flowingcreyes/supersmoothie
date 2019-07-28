@@ -16,21 +16,38 @@
     <div class="smaller-title">
       YouSmoothie
     </div>
-    <div class="strawberrySmoothie-name">
+    <div class="strawberrySmoothie_name">
       <%= strawberrySmoothies.name %>
     </div>
-    <div class="strawberrySmoothie-ingredients">
+    <div class="strawberrySmoothie_ingredients">
       <p>Ingredients</p>
       <%= strawberrySmoothies.ingredients %>
     </div>
-    <div class="strawberrySmoothie-recipe">
+    <div class="strawberrySmoothie_recipe">
       <p>Recipe</p>
       <%= strawberrySmoothies.recipe %>
     </div>
-    <div class="strawberrySmoothie-calories">
+    <div class="strawberrySmoothie_calories">
       <%= strawberrySmoothies.calories %>
     </div>
-    <img src=<%=strawberrySmoothies.source %> class="strawberrySmoothie-image" alt="strawberry smoothie image">
+    <img src=<%=strawberrySmoothies.source %> class="strawberrySmoothie_image" alt="strawberry smoothie image">
+    <form action="/yousmoothie/smoothieemail" method="post">
+      email: <input id="email" type="email" name="emailaddress">
+      <div id="smoothie_name" style="display:none;">
+        <%= strawberrySmoothies.name %>
+      </div>
+      <div id="smoothie_ingredients" style="display:none;">
+        <%= strawberrySmoothies.ingredients %>
+      </div>
+      <div id="smoothie_recipe" style="display:none;">
+        <%= strawberrySmoothies.recipe %>
+      </div>
+      <div id="smoothie_calories" style="display:none;">
+        <%= strawberrySmoothies.calories %>
+      </div>
+      <img src=<%=strawberrySmoothies.source %> style="display:none;" id = "smoothie_image" alt="strawberry smoothie image">
+      <input type="submit">
+    </form>
 </body>
 
 </html>
