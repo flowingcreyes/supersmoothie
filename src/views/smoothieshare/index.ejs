@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../static/partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
+</head>
+<body>
+<header>
+  <h1 class="title">Super Smoothie</h1>
+</header>
+<% include ../static/partials/navbar.ejs %>
+  <div class="smaller-title">
+    YouSmoothie
+  </div>
+  <ul>
+<% subjectItem.forEach((subject) => { %>
+  <li>
+    <a href="/smoothieshare/<%= subject.id %>"> <%= subject.title %> </a>
+  </li>
+<% }) %>
+  </ul>
+</body>
+</html>

@@ -1,8 +1,8 @@
 const request = require("request");
 const server = require("../../src/server.js");
-const base = "http://localhost:3000/";
-const bananaSmoothie = require("../../src/db/models").bananasmoothie;
+const base = "http://localhost:3000/yousmoothie/";
 const sequelize = require("../../src/db/models/index").sequelize;
+const bananaSmoothie = require("../../src/db/models").bananasmoothie;
 
 describe("routes:yousmoothie", () => {
 
@@ -15,21 +15,14 @@ describe("routes:yousmoothie", () => {
     });
   });
   describe("GET /yousmoothie/banana", () => {
-    it("will return a banana smoothie's features", done => {
+    it("will return a valid route", done => {
       request.get(`${base}banana`, (err, res, body) => {
-        bananaSmoothie.findOne({
-          where: {name: "Peanut Butter Banana Smoothie"}
-        }).then(smoothie => {
-          expect(smoothie.name).toBe("Peanut Butter Banana Smoothie")
-          expect(smoothie.calories).toBe("335 calories per cup");
+        //randomizes selection
+      expect(err).toBeNull();
           done();
-        }).catch(err => {
-          console.log(err);
-          done();
-        });
+        })
 
     });
 
-    });
   });
 });

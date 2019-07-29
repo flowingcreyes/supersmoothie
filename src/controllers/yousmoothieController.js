@@ -35,7 +35,6 @@ module.exports = {
   },
 
   banana(req, res, next) {
-    console.log(req.body)
     bananaSmoothieQueries.retrieveBananaSmoothies((err, bananaSmoothies) => {
       if (err) {
         console.log(err);
