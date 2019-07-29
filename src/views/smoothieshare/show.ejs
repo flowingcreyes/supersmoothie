@@ -13,15 +13,7 @@
   <div class="smaller-title">
     SmoothieShare
   </div>
-  <a href="smoothieshare/new">
-  <button>Post Recipe</button>
-</a>
-  <ul>
-<% subjectItem.forEach((subject) => { %>
-  <li>
-    <a href="/smoothieshare/<%= subject.id %>"> <%= subject.title %> </a>
-  </li>
-<% }) %>
-  </ul>
+  <h1><%=subject.title %></h1>
+  <%- subject.description %>
 </body>
 </html>
