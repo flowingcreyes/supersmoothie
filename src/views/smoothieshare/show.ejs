@@ -5,15 +5,23 @@
   <% include ../static/partials/head.ejs %>
     <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
+
 <body>
-<header>
-  <h1 class="title">Super Smoothie</h1>
-</header>
-<% include ../static/partials/navbar.ejs %>
-  <div class="smaller-title">
-    SmoothieShare
-  </div>
-  <h1><%=subject.title %></h1>
-  <%- subject.description %>
+  <header>
+    <h1 class="title">Super Smoothie</h1>
+  </header>
+  <% include ../static/partials/navbar.ejs %>
+    <div class="smaller-title">
+      SmoothieShare
+    </div>
+    <h1>
+      <%=subject.title %>
+    </h1>
+    <%- subject.description %>
+      <a href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
+      <form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
 </body>
+
 </html>

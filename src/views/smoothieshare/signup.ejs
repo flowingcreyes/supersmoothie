@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../static/partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Super Smoothie</h1>
+  </header>
+  <% include ../static/partials/navbar.ejs %>
+    <div class="smaller-title">
+      SmoothieShare
+    </div>
+    <form action="/users" method="post">
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="email">
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="password">
+      <label for="passwordConfirmation">Password confirmation</label>
+      <input type="password" name="passwordConfirmation" placeholder="confirm password">
+      <input type="submit" value="Create Account">
+    </form>
+</body>
+
+</html>

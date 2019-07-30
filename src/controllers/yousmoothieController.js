@@ -61,12 +61,12 @@ module.exports = {
     let ingredients = req.body.smoothie_ingredients;
     let recipe = req.body.smoothie_recipe;
     let calories = req.body.smoothie_calories;
-    let image = req.body.smoothie_image
+    let image = req.body.smoothie_image;
     const msg = {
       to: email,
       from: "supersmoothie@dontreply.com",
       subject: "Super Smoothie",
-      text:"Text",
+      text: "Text",
       html: `
       <h2><strong>Smoothie Name:</strong> ${name}</h2><br><br>
       <h2><strong>Ingredients:</strong> ${ingredients}</h2><br><br>
@@ -74,8 +74,8 @@ module.exports = {
     <h2><strong>Calories:</strong> ${calories}</h2><br><br>
                 `
     };
-    sgMail.send(msg).catch(err => {
-      console.log(err);
-    });
+    //  sgMail.send(msg).catch(err => {
+    //    console.log(err);
+    //  });
   }
 };

@@ -9,6 +9,11 @@
 </head>
 
 <body>
+  <script>
+    function notice() {
+      alert("Smoothie sent!")
+    }
+  </script>
   <header>
     <h1 class="title">Super Smoothie</h1>
   </header>
@@ -31,17 +36,19 @@
       <%= strawberrySmoothies.calories %>
     </div>
     <img src=<%=strawberrySmoothies.source %> class="strawberrySmoothie_image" alt="strawberry smoothie image">
-    <form action="/yousmoothie/smoothieemail" method="post">
+    <form action="/yousmoothie/smoothieemail" method="post" target="hiddenFrame">
       email: <input id="email" type="email" name="emailaddress">
       <input id="smoothie_name" name="smoothie_name" value="<%= strawberrySmoothies.name %>" type="hidden">
-      <input id="smoothie_ingredients" name="smoothie_ingredients" value= "<%= strawberrySmoothies.ingredients %>" type="hidden">
-      <input id="smoothie_recipe" name="smoothie_recipe" value= "<%= strawberrySmoothies.recipe %>" type="hidden">
-      <input id="smoothie_calories" name="smoothie_calories" value= "<%= strawberrySmoothies.calories %>" type="hidden">
-      <input type="submit">
+      <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= strawberrySmoothies.ingredients %>" type="hidden">
+      <input id="smoothie_recipe" name="smoothie_recipe" value="<%= strawberrySmoothies.recipe %>" type="hidden">
+      <input id="smoothie_calories" name="smoothie_calories" value="<%= strawberrySmoothies.calories %>" type="hidden">
+      <input type="submit" onclick="notice()">
     </form>
     <a href="/yousmoothie/strawberry">
     <img id="reload" src="../../image/reload.png">
   </a>
+    <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+
 </body>
 
 </html>

@@ -1,34 +1,63 @@
 const sequelize = require("../../src/db/models/index").sequelize;
-const subjects = require("./models").Subjects;
+const Subjects = require("./models").Subjects;
 
 module.exports = {
-  getSubjects(callback){
-    return subjects.findAll().then(subjectItem => {
-      callback(null, subjectItem)
-    })
-    .catch(err => {
-      console.log(err)
-      callback(err)
-    })
+  getSubjects(callback) {
+    return Subjects.findAll()
+      .then(subjectItem => {
+        callback(null, subjectItem);
+      })
+      .catch(err => {
+        callback(err);
+      });
   },
-  createSubject(newSubject, callback){
-    return subjects.create({
+  createSubject(newSubject, callback) {
+    return Subjects.create({
       title: newSubject.title,
       description: newSubject.description
-    }).then(subject => {
-      callback(null, subject)
     })
-    .catch(err => {
-      callback(err);
-    });
+      .then(subject => {
+        callback(null, subject);
+      })
+      .catch(err => {
+        callback(err);
+      });
   },
-  getOneSubject(id, callback){
-    return subjects.findByPk(id)
-    .then((subject) => {
-      callback(null, subject);
+  getOneSubject(id, callback) {
+    return Subjects.findByPk(id)
+      .then(subject => {
+        callback(null, subject);
+      })
+      .catch(err => {
+        callback(err);
+      });
+  },
+  deleteSubject(id, callback) {
+    return Subjects.destroy({
+      where: { id }
     })
-    .catch((err) => {
-      callback(err);
-    })
+      .then(subject => {
+        callback(null, subject);
+      })
+      .catch(err => {
+        callback(err);
+      });
+  },
+  updateSubject(id, updatedSubject, callback) {
+    return Subjects.findByPk(id).then(subject => {
+      if (!subject) {
+        return callback("Subject not found!");
+      }
+      subject
+        .update(updatedSubject, {
+          fields: Object.keys(updatedSubject)
+        })
+        .then(() => {
+          callback(null, subject);
+        })
+        .catch(err => {
+          callback(err);
+        });
+    });
   }
-}
+};

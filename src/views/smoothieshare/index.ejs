@@ -5,23 +5,27 @@
   <% include ../static/partials/head.ejs %>
     <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
+
 <body>
-<header>
-  <h1 class="title">Super Smoothie</h1>
-</header>
-<% include ../static/partials/navbar.ejs %>
-  <div class="smaller-title">
-    SmoothieShare
-  </div>
-  <a href="smoothieshare/new">
+  <header>
+    <h1 class="title">Super Smoothie</h1>
+  </header>
+  <% include ../static/partials/navbar.ejs %>
+    <div class="smaller-title">
+      SmoothieShare
+    </div>
+    <a href="smoothieshare/new">
   <button>Post Recipe</button>
 </a>
-  <ul>
-<% subjectItem.forEach((subject) => { %>
-  <li>
-    <a href="/smoothieshare/<%= subject.id %>"> <%= subject.title %> </a>
-  </li>
-<% }) %>
-  </ul>
+    <div>
+      <% subjectItem.forEach((subject) => { %>
+        <ul>
+          <a href="/smoothieshare/<%= subject.id %>">
+            <%= subject.title %>
+          </a>
+        </ul>
+        <% }) %>
+    </div>
 </body>
+
 </html>

@@ -5,7 +5,6 @@ const sequelize = require("../../src/db/models/index").sequelize;
 const bananaSmoothie = require("../../src/db/models").bananasmoothie;
 
 describe("routes:yousmoothie", () => {
-
   describe("GET /yousmoothie", () => {
     it("will return a successful route", done => {
       request.get(base, (err, res, body) => {
@@ -18,11 +17,9 @@ describe("routes:yousmoothie", () => {
     it("will return a valid route", done => {
       request.get(`${base}banana`, (err, res, body) => {
         //randomizes selection
-      expect(err).toBeNull();
-          done();
-        })
-
+        expect(err).toBeNull();
+        done();
+      });
     });
-
   });
 });
