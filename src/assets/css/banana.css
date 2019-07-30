@@ -1,14 +1,12 @@
 .bananaSmoothie_name {
-  overflow: hidden;
+  color: white;
   font-weight: bold;
   font-size: 35px;
-  width: 31%;
-  height: 45%;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  top: 25%;
+  right: 35%;
   position: absolute;
-  top: 47%;
-  left: 56%;
-  transform: translate(-53%, -70%);
-  margin: 55px;
 }
 .bananaSmoothie_ingredients {
   overflow: hidden;

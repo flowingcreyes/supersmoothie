@@ -4,12 +4,12 @@
   font-size: 45px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  top: 13%;
-  right: 42%;
+  top: 17%;
+  right: 40%;
   position: absolute;
 }
 .blueberry {
-  width: 17%;
+  width: 14%;
   height: 30%;
   position: absolute;
   background: url("../image/blueberries.jpg");
@@ -19,25 +19,25 @@
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: dotted white;
+  border: solid white;
   overflow: hidden;
 }
 .banana {
-  width: 17%;
+  width: 14%;
   height: 30%;
   position: absolute;
   background: url("../image/bananas.jpg");
   background-repeat: no-repeat;
   top: 50%;
-  left: 52%;
+  left: 37%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: dotted white;
+  border: solid white;
   overflow: hidden;
 }
 .strawberry {
-  width: 17%;
+  width: 14%;
   background: url("../image/strawberries.jpg");
   background-repeat: no-repeat;
   height: 30%;
@@ -48,20 +48,20 @@
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: dotted white;
+  border: solid white;
   overflow: hidden;
 }
 .pineapple {
-  width: 17%;
+  width: 14%;
   height: 30%;
   position: absolute;
   background: url("../image/pineapples.jpg");
   background-repeat: no-repeat;
-  top: 90%;
-  left: 52%;
+  top: 50%;
+  left: 64%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
-  border: dotted white;
+  border: solid white;
   overflow: hidden;
 }

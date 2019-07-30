@@ -3,22 +3,21 @@
   font-size: 30px;
 }
 .yousmoothie_button {
-  background-color: #32a883;
+  background-color: #4d79ff;
   border: none;
   color: white;
-  padding: 15px 10px;
+  padding: 14px 7px;
   width: 50%;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 21%;
+  margin-top: 20%;
   transform: translate(40%, -50%);
 }
 .yousmoothie_description {
   font-weight: bold;
-  margin-top: 10%;
-  margin-left: 2%;
-  margin-right: 2%;
+margin-top: 10%;
+margin-left: 7%;
   font-size: 20px;
 }
 .smoothieshare-title {
@@ -27,9 +26,9 @@
 }
 .smoothieshare-description {
   font-weight: bold;
+  margin-left: 7%;
   margin-top: 10%;
-  margin-left: 2%;
-  margin-right: 2%;
+
   font-size: 20px;
 }
 .smoothiemonth-title {
@@ -37,17 +36,14 @@
   font-size: 40px;
 }
 .smoothieshare-button {
-  background-color: #32a883;
+  background-color: #4d79ff;
   border: none;
   color: white;
-  padding: 15px 10px;
+  padding: 14px 7px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   width: 50%;
   transform: translate(40%, -50%);
-
-  margin-top: 21%;
-}
-.twitter-share-button {
+  margin-top: 20%;
 }

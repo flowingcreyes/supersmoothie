@@ -93,7 +93,7 @@ describe("routes : subjects", () => {
   describe("POST /smoothieshare/:id/destroy", () => {
     it("will delete the subject with the associated ID", done => {
       Subjects.findAll().then(subjects => {
-        const subjectsBeforeDelete = Subjects.length;
+        const subjectsBeforeDelete = subjects.length;
         expect(subjectsBeforeDelete).toBe(1);
         request.post(`${base}${this.subject.id}/destroy`, (err, res, body) => {
           Subjects.findAll().then(subjects => {
@@ -111,6 +111,27 @@ describe("routes : subjects", () => {
         expect(err).toBeNull();
         expect(body).toContain("Edit Your Subject");
         done();
+      });
+    });
+  });
+  describe("POST /smoothieshare/:id/update", () => {
+    it("will update the post's post", done => {
+      const options = {
+        url: `${base}${this.subject.id}/update`,
+        form: {
+          title: "Smoothie Luv",
+          description: "Where are my smoothie luvers at?"
+        }
+      };
+      request.post(options, (err, res, body) => {
+        expect(err).toBeNull();
+        Subjects.findOne({
+          where: { id: this.subject.id }
+        }).then(subject => {
+    //      console.log(this.subject.id)
+          expect(subject.title).toBe("Smoothie Luv");
+          done();
+        });
       });
     });
   });

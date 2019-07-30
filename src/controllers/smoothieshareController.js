@@ -68,7 +68,7 @@ module.exports = {
     });
   },
   edit(req, res, next) {
-    subjectQueries.getSubjects(req.params.id, (err, subject) => {
+    subjectQueries.getOneSubject(req.params.id, (err, subject) => {
       if (err || subject == null) {
         res.redirect(404, "/");
       } else {
