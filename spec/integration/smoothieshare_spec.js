@@ -3,10 +3,12 @@ const server = require("../../src/server");
 const base = "http://localhost:3000/smoothieshare/";
 const sequelize = require("../../src/db/models/index").sequelize;
 const Subjects = require("../../src/db/models").Subjects;
+const Users = require("../../src/db/models").Users;
 
 describe("routes : subjects", () => {
   beforeEach(done => {
     this.subject;
+    this.user;
     sequelize.sync({ force: true }).then(res => {
       Subjects.create({
         title: "Sam Smoothie",
@@ -68,6 +70,26 @@ describe("routes : subjects", () => {
           });
       });
     });
+    // it("will not make a new subject that fails validation", done => {
+    //   const option = {
+    //     url: `${base}create`,
+    //     form: {
+    //       title: "1",
+    //       description: "2"
+    //     }
+    //   };
+    //   request.post(option, (err, res, body) => {
+    //     Subjects.findOne({ where: { title: "1" } })
+    //       .then(subject => {
+    //         expect(subject).toBeNull();
+    //         done();
+    //       })
+    //       .catch(err => {
+    //         console.log(err);
+    //         done();
+    //       });
+    //   });
+    // });
   });
   describe("GET /smoothieshare/:id", () => {
     it("will show a view with the selected subject", done => {
@@ -128,10 +150,42 @@ describe("routes : subjects", () => {
         Subjects.findOne({
           where: { id: this.subject.id }
         }).then(subject => {
-    //      console.log(this.subject.id)
+          //      console.log(this.subject.id)
           expect(subject.title).toBe("Smoothie Luv");
           done();
         });
+      });
+    });
+  });
+  describe("POST /users", () => {
+    it("will create a user account", done => {
+      const options = {
+        url: "http://localhost:3000/users",
+        form: {
+          email: "donaldduck@gmail.com",
+          password: "98789896!"
+        }
+      }
+      request.post(options, (err, res, body) => {
+        Users.findOne({
+          where: {email: "donaldduck@gmail.com"}
+        }) .then(user => {
+          expect(user.email).toBe("donaldduck@gmail.com")
+          done();
+        })
+        .catch((err) => {
+          console.log(err)
+          done();
+        })
+      })
+    } )
+  })
+  describe("GET /smoothieshare/signin", () => {
+    it("will show a signing in form", done => {
+      request.get(`${base}signin`, (err, res, body) => {
+        expect(err).toBeNull();
+        expect(body).toContain("Sign in");
+        done();
       });
     });
   });

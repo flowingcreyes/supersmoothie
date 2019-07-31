@@ -84,5 +84,24 @@ module.exports = {
         res.redirect(`/smoothieshare/${subject.id}`);
       }
     });
+  },
+  signInForm(req, res, next){
+    res.render("smoothieshare/signin")
+  },
+  signIn(req, res, next){
+    passport.authenticate("local")(req, res, function(){
+      if(!req.user){
+        req.flash("notice", "Sign in failed! Try again!")
+        res.redirect("/smoothieshare/signin")
+      } else{
+        req.flash("notice", "Success!")
+        res.redirect("/")
+      }
+    })
+  },
+  signOut(req, res, next){
+    req.logout();
+    req.flash("notice","Signed out!")
+    res.redirect("/");
   }
 };

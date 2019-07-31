@@ -20,7 +20,7 @@ module.exports = {
         resave: false,
         saveUninitialized: false,
         cookie: {
-          maxAge: 1.21e9
+          maxAge: 1.21e+9
         }
       })
     );

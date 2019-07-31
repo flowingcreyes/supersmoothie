@@ -11,9 +11,18 @@ YouSmoothie
 </nav>
 
 <nav class="navigation">
-  <a href="/smoothieshare/signup">
-Sign Up
-</a>
+  <% if(currentUser) { %>
+      <li>
+        <a  href="/smoothieshare/signout">Sign out</a>
+      </li>
+    <% } else { %>
+      <li >
+        <a href="/smoothieshare/signup">Sign up</a>
+      </li>
+      <li>
+        <a href="/smoothieshare/signin">Sign in</a>
+      </li>
+    <% }%>
 </nav>
 
 <nav class="navigation">
