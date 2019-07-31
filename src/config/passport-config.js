@@ -14,7 +14,7 @@ module.exports = {
           usernameField: "email"
         },
         (email, password, done) => {
-          User.findOne({
+          Users.findOne({
             where: { email }
           }).then(user => {
             if (!user || !authHelper.comparePass(password, user.password)) {
@@ -33,7 +33,7 @@ module.exports = {
     });
 
     passport.deserializeUser((id, callback) => {
-      User.findByPk(id)
+      Users.findByPk(id)
         .then(user => {
           callback(null, user);
         })

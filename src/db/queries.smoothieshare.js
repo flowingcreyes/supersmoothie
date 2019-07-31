@@ -1,4 +1,4 @@
-const User = require("./models").Users;
+const Users = require("./models").Users;
 const subjects = require("./models").Subjects;
 
 const bcrypt = require("bcryptjs");
@@ -7,7 +7,7 @@ module.exports = {
   createUser(newUser, callback) {
     const salt = bcrypt.genSaltSync();
     const hashedPassword = bcrypt.hashSync(newUser.password, salt);
-    return User.create({
+    return Users.create({
       email: newUser.email,
       password: hashedPassword
     })
