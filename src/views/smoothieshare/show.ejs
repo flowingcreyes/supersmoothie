@@ -18,10 +18,13 @@
       <%=subject.title %>
     </h1>
     <%- subject.description %>
+    
+    <% if(currentUser.isAdmin()) { %>
       <a href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
       <form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
+      <% } %>
 </body>
 
 </html>

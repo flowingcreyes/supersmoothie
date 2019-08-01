@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     Subjects.belongsTo(models.Users, {
       foreignKey: "userId",
       onDelete: "CASCADE"
-    })
+    });
   };
   return Subjects;
 };

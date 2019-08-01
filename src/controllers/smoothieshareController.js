@@ -1,6 +1,7 @@
 const subjectQueries = require("../db/queries.subjects.js");
 const smoothieshareQueries = require("../db/queries.smoothieshare.js");
 const passport = require("passport");
+const Authorizer = require("../policies/subjects");
 
 module.exports = {
   index(req, res, next) {
@@ -13,20 +14,34 @@ module.exports = {
     });
   },
   new(req, res, next) {
-    res.render("smoothieshare/new");
+    const authorized = new Authorizer(req.user).new();
+    if (authorized) {
+      res.render("smoothieshare/new");
+    } else {
+      req.flash("notice", "You aren't authorized to do that!");
+      res.redirect("/smoothieshare");
+    }
   },
   create(req, res, next) {
-    let newSubject = {
-      title: req.body.title,
-      description: req.body.description
-    };
-    subjectQueries.createSubject(newSubject, (err, subject) => {
-      if (err) {
-        res.redirect(500, "smoothieshare/new");
-      } else {
-        res.redirect(303, `/smoothieshare/${subject.id}`);
-      }
-    });
+    const authorized = new Authorizer(req.user).create();
+
+    if (authorized) {
+      let newSubject = {
+        title: req.body.title,
+        description: req.body.description,
+        userId: req.user.id
+      };
+      subjectQueries.createSubject(newSubject, (err, subject) => {
+        if (err) {
+          res.redirect(500, "smoothieshare/new");
+        } else {
+          res.redirect(303, `/smoothieshare/${subject.id}`);
+        }
+      });
+    } else {
+      req.flash("notice", "You're not authorized to do that.");
+      res.redirect("/smoothieshare");
+    }
   },
   show(req, res, body) {
     subjectQueries.getOneSubject(req.params.id, (err, subject) => {
@@ -59,49 +74,55 @@ module.exports = {
     });
   },
   destroy(req, res, next) {
-    subjectQueries.deleteSubject(req.params.id, (err, subject) => {
+    smoothieshareQueries.deleteSubject(req, (err, subject) => {
       if (err) {
-        res.redirect(500, `/smoothieshare/${subject.id}`);
+        res.redirect(err, `/smoothieshare/${req.params.id}`);
       } else {
         res.redirect(303, "/smoothieshare");
       }
     });
   },
   edit(req, res, next) {
-    subjectQueries.getOneSubject(req.params.id, (err, subject) => {
+    smoothieshareQueries.getOneSubject(req.params.id, (err, subject) => {
       if (err || subject == null) {
         res.redirect(404, "/");
       } else {
-        res.render("smoothieshare/edit", { subject });
+        const authorized = new Authorizer(req.user, subject).edit();
+        if (authorized) {
+          res.render("smoothieshare/edit", { subject });
+        } else {
+          req.flash("You're not authorized to do that.");
+          res.redirect(`/smoothieshare/${req.params.id}`);
+        }
       }
     });
   },
   update(req, res, next) {
-    subjectQueries.updateSubject(req.params.id, req.body, (err, subject) => {
-      if (err || subject == null) {
-        res.redirect(404, `/smoothieshare/${req.params.id}/edit`);
+  smoothieshareQueries.updateSubject(req, req.body, (err, subject) => {
+    if(err || subject == null){
+      res.redirect(401, `/smoothieshare/${req.params.id}/edit`);
+    } else{
+      res.redirect(`/smoothieshare/${req.params.id}`)
+    }
+  });
+  },
+  signInForm(req, res, next) {
+    res.render("smoothieshare/signin");
+  },
+  signIn(req, res, next) {
+    passport.authenticate("local")(req, res, function() {
+      if (!req.user) {
+        req.flash("notice", "Sign in failed! Try again!");
+        res.redirect("/smoothieshare/signin");
       } else {
-        res.redirect(`/smoothieshare/${subject.id}`);
+        req.flash("notice", "Success!");
+        res.redirect("/");
       }
     });
   },
-  signInForm(req, res, next){
-    res.render("smoothieshare/signin")
-  },
-  signIn(req, res, next){
-    passport.authenticate("local")(req, res, function(){
-      if(!req.user){
-        req.flash("notice", "Sign in failed! Try again!")
-        res.redirect("/smoothieshare/signin")
-      } else{
-        req.flash("notice", "Success!")
-        res.redirect("/")
-      }
-    })
-  },
-  signOut(req, res, next){
+  signOut(req, res, next) {
     req.logout();
-    req.flash("notice","Signed out!")
+    req.flash("notice", "Signed out!");
     res.redirect("/");
   }
 };

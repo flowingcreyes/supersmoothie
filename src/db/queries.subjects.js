@@ -14,7 +14,8 @@ module.exports = {
   createSubject(newSubject, callback) {
     return Subjects.create({
       title: newSubject.title,
-      description: newSubject.description
+      description: newSubject.description,
+      userId: newSubject.userId
     })
       .then(subject => {
         callback(null, subject);
@@ -32,32 +33,45 @@ module.exports = {
         callback(err);
       });
   },
-  deleteSubject(id, callback) {
-    return Subjects.destroy({
-      where: { id }
-    })
-      .then(subject => {
-        callback(null, subject);
+  deleteSubject(req, callback) {
+  return Subjects.findByPk(req.params.id)
+  .then((subject) => {
+    const authorized = new Authorizer(req.user, subject).destroy();
+    if(authorized){
+      subject.destroy()
+      .then((res) => {
+        callback(null, subject)
       })
-      .catch(err => {
-        callback(err);
-      });
+    } else{
+      req.flash("notice", "You're not authorized to do that.")
+      callback(401);
+    }
+  })
+  .catch((err) => {
+    callback(err);
+  });
   },
-  updateSubject(id, updatedSubject, callback) {
-    return Subjects.findByPk(id).then(subject => {
-      if (!subject) {
-        return callback("Subject not found!");
-      }
-      subject
-        .update(updatedSubject, {
-          fields: Object.keys(updatedSubject)
-        })
-        .then(() => {
-          callback(null, subject);
-        })
-        .catch(err => {
-          callback(err);
-        });
-    });
+  updateSubject(req, updatedSubject, callback) {
+  return Subjects.findByPk(req.params.id)
+  .then((subject) => {
+    if(!subject){
+      return callback("Subject not found!");
+    }
+    const authorized = new Authorizer(req.user, subject).update();
+    if(authorized){
+      subject.update(updateSubject, {
+        fields: Object.keys(updatedSubject)
+      })
+      .then(() => {
+        callback(null, subject)
+      })
+      .catch((err) => {
+        callback(err)
+      })
+    } else{
+      req.flash("notice", "You're not authorized to do that.")
+    callback("Forbidden.")
+    }
+  });
   }
 };

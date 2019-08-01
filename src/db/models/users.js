@@ -3,8 +3,19 @@ module.exports = (sequelize, DataTypes) => {
   const Users = sequelize.define(
     "Users",
     {
-      email: DataTypes.STRING,
-      password: DataTypes.STRING
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isEmail: { msg: "must be a valid email" }
+        }
+      },
+      password: { type: DataTypes.STRING, allowNull: false },
+      role: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "member"
+      }
     },
     {}
   );
@@ -14,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "userId",
       as: "subjects"
     });
+  };
+  Users.prototype.isAdmin = function() {
+    return this.role === "admin";
   };
   return Users;
 };

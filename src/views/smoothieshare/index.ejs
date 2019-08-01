@@ -3,7 +3,7 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-  <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
+    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
 
 <body>
@@ -14,9 +14,12 @@
     <div class="smaller-title">
       SmoothieShare
     </div>
+    <% if(currentUser) { %>
     <a href="smoothieshare/new">
-  <button>Post Recipe</button>
-</a>
+        <button>Post Recipe</button>
+    </a>
+    <% } %>
+
     <div>
       <% subjectItem.forEach((subject) => { %>
         <ul>
