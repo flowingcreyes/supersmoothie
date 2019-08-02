@@ -1,5 +1,6 @@
 const sequelize = require("../../src/db/models/index").sequelize;
 const Subjects = require("./models").Subjects;
+const Authorizer = require("../policies/subjects");
 
 module.exports = {
   getSubjects(callback) {
@@ -34,44 +35,44 @@ module.exports = {
       });
   },
   deleteSubject(req, callback) {
-  return Subjects.findByPk(req.params.id)
-  .then((subject) => {
-    const authorized = new Authorizer(req.user, subject).destroy();
-    if(authorized){
-      subject.destroy()
-      .then((res) => {
-        callback(null, subject)
+    return Subjects.findByPk(req.params.id)
+
+      .then(subject => {
+        const authorized = new Authorizer(req.user, subject).destroy();
+        if (authorized) {
+          subject.destroy().then(res => {
+            callback(null, subject);
+          });
+        } else {
+          req.flash("notice", "You're not authorized to do that.");
+          callback(401);
+        }
       })
-    } else{
-      req.flash("notice", "You're not authorized to do that.")
-      callback(401);
-    }
-  })
-  .catch((err) => {
-    callback(err);
-  });
+      .catch(err => {
+        callback(err);
+      });
   },
   updateSubject(req, updatedSubject, callback) {
-  return Subjects.findByPk(req.params.id)
-  .then((subject) => {
-    if(!subject){
-      return callback("Subject not found!");
-    }
-    const authorized = new Authorizer(req.user, subject).update();
-    if(authorized){
-      subject.update(updateSubject, {
-        fields: Object.keys(updatedSubject)
-      })
-      .then(() => {
-        callback(null, subject)
-      })
-      .catch((err) => {
-        callback(err)
-      })
-    } else{
-      req.flash("notice", "You're not authorized to do that.")
-    callback("Forbidden.")
-    }
-  });
+    return Subjects.findByPk(req.params.id).then(subject => {
+      if (!subject) {
+        return callback("Subject not found!");
+      }
+      const authorized = new Authorizer(req.user, subject).update();
+      if (authorized) {
+        subject
+          .update(updatedSubject, {
+            fields: Object.keys(updatedSubject)
+          })
+          .then(() => {
+            callback(null, subject);
+          })
+          .catch(err => {
+            callback(err);
+          });
+      } else {
+        req.flash("notice", "You're not authorized to do that.");
+        callback("Forbidden.");
+      }
+    });
   }
 };

@@ -18,13 +18,12 @@ module.exports = {
     if (authorized) {
       res.render("smoothieshare/new");
     } else {
-      req.flash("notice", "You aren't authorized to do that!");
+      req.flash("notice", "You are not authorized to do that.");
       res.redirect("/smoothieshare");
     }
   },
   create(req, res, next) {
     const authorized = new Authorizer(req.user).create();
-
     if (authorized) {
       let newSubject = {
         title: req.body.title,
@@ -39,7 +38,7 @@ module.exports = {
         }
       });
     } else {
-      req.flash("notice", "You're not authorized to do that.");
+      req.flash("notice", "You are not authorized to do that.");
       res.redirect("/smoothieshare");
     }
   },
@@ -74,16 +73,17 @@ module.exports = {
     });
   },
   destroy(req, res, next) {
-    smoothieshareQueries.deleteSubject(req, (err, subject) => {
+    subjectQueries.deleteSubject(req, (err, subject) => {
       if (err) {
-        res.redirect(err, `/smoothieshare/${req.params.id}`);
+        console.log(err);
+        res.redirect(500, `/smoothieshare/${subject.id}`);
       } else {
         res.redirect(303, "/smoothieshare");
       }
     });
   },
   edit(req, res, next) {
-    smoothieshareQueries.getOneSubject(req.params.id, (err, subject) => {
+    subjectQueries.getOneSubject(req.params.id, (err, subject) => {
       if (err || subject == null) {
         res.redirect(404, "/");
       } else {
@@ -91,20 +91,20 @@ module.exports = {
         if (authorized) {
           res.render("smoothieshare/edit", { subject });
         } else {
-          req.flash("You're not authorized to do that.");
-          res.redirect(`/smoothieshare/${req.params.id}`);
+          req.flash("You are not authorized to do that.");
+          res.redirect("/smoothieshare");
         }
       }
     });
   },
   update(req, res, next) {
-  smoothieshareQueries.updateSubject(req, req.body, (err, subject) => {
-    if(err || subject == null){
-      res.redirect(401, `/smoothieshare/${req.params.id}/edit`);
-    } else{
-      res.redirect(`/smoothieshare/${req.params.id}`)
-    }
-  });
+    subjectQueries.updateSubject(req, req.body, (err, subject) => {
+      if (err || subject == null) {
+        res.redirect(404, `/smoothieshare/${req.params.id}/edit`);
+      } else {
+        res.redirect(`/smoothieshare/${subject.id}`);
+      }
+    });
   },
   signInForm(req, res, next) {
     res.render("smoothieshare/signin");
