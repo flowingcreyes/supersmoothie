@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   bananasmoothie.associate = function(models) {
-    // associations can be defined here
+    //  associations can be defined here
   };
   return bananasmoothie;
 };

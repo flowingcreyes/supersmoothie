@@ -74,8 +74,8 @@ module.exports = {
     <h2><strong>Calories:</strong> ${calories}</h2><br><br>
                 `
     };
-    //  sgMail.send(msg).catch(err => {
-    //    console.log(err);
-    //  });
+    sgMail.send(msg).catch(err => {
+      console.log(err);
+    });
   }
 };

@@ -1,18 +1,22 @@
 <% if(messages.error || messages.notice) { %>
 
-<!-- #2 -->
+  <!-- #2 -->
   <div>
-    
+
     <% if(messages.error) { %>
 
-    Validation errors:
-    <ul>
-      <% messages.error.forEach((err) => { %>
-        <li><%= `${err.param} ${err.msg}` %></li>
-      <% }) %>
-    </ul>
-    <% } else { %>
-      <p><%= messages.notice %></p>
-    <% } %>
+      Validation errors:
+      <ul>
+        <% messages.error.forEach((err) => { %>
+          <li>
+            <%= `${err.param} ${err.msg}` %>
+          </li>
+          <% }) %>
+      </ul>
+      <% } else { %>
+        <p>
+          <%= messages.notice %>
+        </p>
+        <% } %>
   </div>
-<% } %>
+  <% } %>

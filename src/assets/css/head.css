@@ -1,0 +1,79 @@
+body {
+  background-image: url("../image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Lucida Console";
+  width: 100%;
+  color: black;
+}
+a:visited {
+  color: white;
+}
+.navigation {
+  bottom: 45px;
+  position: relative;
+  left: 68%;
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.smaller-title {
+  text-align: center;
+  left: 50%;
+  color: black;
+  font-size: 55px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
+    1px 1px 0 pink;
+}
+.title {
+  text-align: center;
+  left: 50%;
+  color: black;
+  font-size: 55px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
+    1px 1px 0 pink;
+}
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 4px 6px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

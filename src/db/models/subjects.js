@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Subjects.associate = function(models) {
-    // associations can be defined here
+    //  associations can be defined here
     Subjects.belongsTo(models.Users, {
       foreignKey: "userId",
       onDelete: "CASCADE"

@@ -2,6 +2,7 @@ const subjectQueries = require("../db/queries.subjects.js");
 const smoothieshareQueries = require("../db/queries.smoothieshare.js");
 const passport = require("passport");
 const Authorizer = require("../policies/subjects");
+const markdown = require("markdown").markdown;
 
 module.exports = {
   index(req, res, next) {
@@ -47,6 +48,7 @@ module.exports = {
       if (err || subject == null) {
         res.redirect(404, "/");
       } else {
+        subject.description = markdown.toHTML(subject.description);
         res.render("smoothieshare/show", { subject });
       }
     });

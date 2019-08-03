@@ -3,35 +3,35 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
 
 <body>
   <header>
     <h1 class="title">Super Smoothie</h1>
+    <% include ../static/partials/navbar.ejs %>
+      <div class="smaller-title">
+        SmoothieShare
+      </div>
   </header>
-  <% include ../static/partials/navbar.ejs %>
-    <div class="smaller-title">
-      SmoothieShare
-    </div>
-    <h1>
-      <%=subject.title %>
-    </h1>
-    <%- subject.description %>
-      <p>
-        <% if(currentUser) {%>
-          created by
-          <%= currentUser.email %> on
-            <%= subject.createdAt %>
-              <% }%>
-      </p>
 
-      <% if(currentUser && (currentUser.id === subject.userId || currentUser.isAdmin())) { %>
-        <a href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
-        <form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
-          <button type="submit" class="btn btn-danger">Delete</button>
-        </form>
-        <% } %>
+  <h1>
+    <%=subject.title %>
+  </h1>
+  <%- subject.description %>
+    <p>
+      <% if(currentUser) {%>
+        created by
+        <%= currentUser.email %> on
+          <%= subject.createdAt %>
+            <% }%>
+    </p>
+
+    <% if(currentUser && (currentUser.id === subject.userId || currentUser.isAdmin())) { %>
+      <a href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
+      <form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      <% } %>
 </body>
 
 </html>

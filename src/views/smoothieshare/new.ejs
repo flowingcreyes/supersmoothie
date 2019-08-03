@@ -8,13 +8,14 @@
 <body>
   <% include ../static/partials/messages.ejs %>
 
-  <header>
-    <h1 class="title">Super Smoothie</h1>
-  </header>
-  <% include ../static/partials/navbar.ejs %>
-    <div class="smaller-title">
-      SmoothieShare
-    </div>
+    <header>
+      <h1 class="title">Super Smoothie</h1>
+      <% include ../static/partials/navbar.ejs %>
+        <div class="smaller-title">
+          SmoothieShare
+        </div>
+    </header>
+
     <h2>Create a Subject</h2>
     <form action="/smoothieshare/create" method="post">
       <label for="title">Subject title</label>

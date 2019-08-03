@@ -176,7 +176,7 @@ describe("MEMBER routes : subjects", () => {
         Subjects.findOne({
           where: { id: this.subject.id }
         }).then(subject => {
-          //      console.log(this.subject.id)
+          console.log(this.subject.id);
           expect(subject.title).toBe("Smoothie Luv");
           done();
         });

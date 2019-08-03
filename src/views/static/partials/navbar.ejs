@@ -1,37 +1,48 @@
-<nav class="navigation">
+<nav class="navigation dropdown dropbtn">
   <a href="/">
 Home
 </a>
 </nav>
 
-<nav class="navigation">
+<nav class="navigation dropdown dropbtn">
   <a href="/yousmoothie">
 YouSmoothie
 </a>
 </nav>
 
 <nav class="navigation">
-  <% if(currentUser) { %>
-    <ul>
-      <li>
-        <a href="/smoothieshare/signout">Sign out</a>
-      </li>
-      </ul>
-    <% } else { %>
-      <ul>
+  <div class="dropdown">
+    <button class="dropbtn">SmoothieShare</button>
+    <div class="dropdown-content">
+      <% if(currentUser) { %>
+        <ul>
+          <li>
+            <a href="/smoothieshare">
+        SmoothieShare
+      </a>
 
-      <li >
-        <a href="/smoothieshare/signup">Sign up</a>
-      </li>
-      <li>
-        <a href="/smoothieshare/signin">Sign in</a>
-      </li>
-      </ul>
-    <% }%>
-</nav>
+          </li>
+          <li>
+            <a href="/smoothieshare/signout">Sign out</a>
+          </li>
+        </ul>
+        <% } else { %>
+          <ul>
+            <li>
+              <a href="/smoothieshare">
+          SmoothieShare
+          </a>
 
-<nav class="navigation">
-  <a href="/smoothieshare">
-SmoothieShare
-</a>
+            </li>
+            <li>
+              <a href="/smoothieshare/signup">Sign up</a>
+            </li>
+            <li>
+              <a href="/smoothieshare/signin">Sign in</a>
+            </li>
+
+          </ul>
+          <% }%>
+    </div>
+  </div>
 </nav>

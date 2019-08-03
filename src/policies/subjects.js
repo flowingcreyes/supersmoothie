@@ -1,8 +1,6 @@
-// #1
 const ApplicationPolicy = require("./application");
 
 module.exports = class SubjectPolicy extends ApplicationPolicy {
-  // #2
   new() {
     return this.user != null;
   }
@@ -13,7 +11,6 @@ module.exports = class SubjectPolicy extends ApplicationPolicy {
   show() {
     return true;
   }
-  // #3
   edit() {
     return this._isOwner() || this._isAdmin();
   }

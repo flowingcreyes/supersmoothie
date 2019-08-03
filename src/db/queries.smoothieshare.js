@@ -1,6 +1,5 @@
 const Users = require("./models").Users;
 const subjects = require("./models").Subjects;
-
 const bcrypt = require("bcryptjs");
 
 module.exports = {

@@ -3,9 +3,7 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-    <link rel="stylesheet" type="text/css" href="../../css/blueberry.css">
 
-    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
 
 <body>
@@ -16,38 +14,39 @@
   </script>
   <header>
     <h1 class="title">Super Smoothie</h1>
+    <% include ../static/partials/navbar.ejs %>
+      <div class="smaller-title">
+        YouSmoothie
+      </div>
   </header>
-  <% include ../static/partials/navbar.ejs %>
-    <div class="smaller-title">
-      YouSmoothie
-    </div>
-    <div class="blueberrySmoothie_name">
-      <%= blueberrySmoothies.name %>
-    </div>
-    <div class="blueberrySmoothie_ingredients">
-      <p>Ingredients</p>
-      <%= blueberrySmoothies.ingredients %>
-    </div>
-    <div class="blueberrySmoothie_recipe">
-      <p>Recipe</p>
-      <%= blueberrySmoothies.recipe %>
-    </div>
-    <div class="blueberrySmoothie_calories">
-      <%= blueberrySmoothies.calories %>
-    </div>
-    <img src=<%=blueberrySmoothies.source %> class="blueberrySmoothie_image" alt="blueberry smoothie image">
-    <form action="/yousmoothie/smoothieemail" method="post" target="hiddenFrame">
-      email: <input id="email" type="email" name="emailaddress">
-      <input id="smoothie_name" name="smoothie_name" value="<%= blueberrySmoothies.name %>" type="hidden">
-      <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= blueberrySmoothies.ingredients %>" type="hidden">
-      <input id="smoothie_recipe" name="smoothie_recipe" value="<%= blueberrySmoothies.recipe %>" type="hidden">
-      <input id="smoothie_calories" name="smoothie_calories" value="<%= blueberrySmoothies.calories %>" type="hidden">
-      <input type="submit" onclick="notice()">
-    </form>
-    <a href="/yousmoothie/blueberry">
+
+  <div class="blueberrySmoothie_name">
+    <%= blueberrySmoothies.name %>
+  </div>
+  <div class="blueberrySmoothie_ingredients">
+    <p>Ingredients</p>
+    <%= blueberrySmoothies.ingredients %>
+  </div>
+  <div class="blueberrySmoothie_recipe">
+    <p>Recipe</p>
+    <%= blueberrySmoothies.recipe %>
+  </div>
+  <div class="blueberrySmoothie_calories">
+    <%= blueberrySmoothies.calories %>
+  </div>
+  <img src=<%=blueberrySmoothies.source %> class="blueberrySmoothie_image" alt="blueberry smoothie image">
+  <form action="/yousmoothie/smoothieemail" method="post" target="hiddenFrame">
+    email: <input id="email" type="email" name="emailaddress">
+    <input id="smoothie_name" name="smoothie_name" value="<%= blueberrySmoothies.name %>" type="hidden">
+    <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= blueberrySmoothies.ingredients %>" type="hidden">
+    <input id="smoothie_recipe" name="smoothie_recipe" value="<%= blueberrySmoothies.recipe %>" type="hidden">
+    <input id="smoothie_calories" name="smoothie_calories" value="<%= blueberrySmoothies.calories %>" type="hidden">
+    <input type="submit" onclick="notice()">
+  </form>
+  <a href="/yousmoothie/blueberry">
     <img id="reload" src="../../image/reload.png">
   </a>
-    <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+  <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
 </body>
 

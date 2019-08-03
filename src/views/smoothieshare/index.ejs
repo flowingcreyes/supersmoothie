@@ -3,32 +3,32 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-    <link rel="stylesheet" type="text/css" href="../../css/yousmoothiehead.css">
 </head>
 
 <body>
   <header>
     <h1 class="title">Super Smoothie</h1>
+    <% include ../static/partials/navbar.ejs %>
+      <div class="smaller-title">
+        SmoothieShare
+      </div>
   </header>
-  <% include ../static/partials/navbar.ejs %>
-    <div class="smaller-title">
-      SmoothieShare
-    </div>
-    <% if(currentUser) { %>
+
+  <% if(currentUser) { %>
     <a href="smoothieshare/new">
         <button>Post Recipe</button>
     </a>
     <% } %>
 
-    <div>
-      <% subjectItem.forEach((subject) => { %>
-        <ul>
-          <a href="/smoothieshare/<%= subject.id %>">
-            <%= subject.title %>
-          </a>
-        </ul>
-        <% }) %>
-    </div>
+      <div>
+        <% subjectItem.forEach((subject) => { %>
+          <ul>
+            <a href="/smoothieshare/<%= subject.id %>">
+              <%= subject.title %>
+            </a>
+          </ul>
+          <% }) %>
+      </div>
 </body>
 
 </html>
