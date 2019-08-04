@@ -19,22 +19,22 @@
       </div>
   </header>
 
-  <div class="pineappleSmoothie_name">
+  <div class="smoothie_name">
     <%= pineappleSmoothies.name %>
   </div>
-  <div class="pineappleSmoothie_ingredients">
+  <div class="smoothie_ingredients">
     <p>Ingredients</p>
     <%= pineappleSmoothies.ingredients %>
   </div>
-  <div class="pineappleSmoothie_recipe">
+  <div class="smoothie_recipe">
     <p>Recipe</p>
     <%= pineappleSmoothies.recipe %>
   </div>
-  <div class="pineappleSmoothie_calories">
+  <div class="smoothie_calories">
     <%= pineappleSmoothies.calories %>
   </div>
   <div>
-    <img src=<%=pineappleSmoothies.source %> class="pineappleSmoothie_image" alt="pineapple smoothie image">
+    <img src=<%=pineappleSmoothies.source %> class="smoothie_image" alt="pineapple smoothie image">
   </div>
   <form action="/yousmoothie/smoothieemail" method="post" target="hiddenFrame">
     email: <input id="email" type="email" name="emailaddress">

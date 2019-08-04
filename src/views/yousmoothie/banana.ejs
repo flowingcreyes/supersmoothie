@@ -3,6 +3,7 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
+  <% include ../static/partials/yousmoothiehead.ejs %>
 
 </head>
 
@@ -19,23 +20,23 @@
         YouSmoothie
       </div>
   </header>
-
-  <div class="bananaSmoothie_name">
+<section class="smoothie_data">
+  <div class="smoothie_name">
     <%= bananaSmoothies.name %>
   </div>
-  <div class="bananaSmoothie_ingredients">
+  <div class="smoothie_ingredients">
     <p>Ingredients</p>
     <%= bananaSmoothies.ingredients %>
   </div>
-  <div class="bananaSmoothie_recipe">
+  <div class="smoothie_recipe">
     <p>Recipe</p>
     <%= bananaSmoothies.recipe %>
   </div>
-  <div class="bananaSmoothie_calories">
+  <div class="smoothie_calories">
     <%= bananaSmoothies.calories %>
   </div>
-  <img src=<%=bananaSmoothies.source %> class="bananaSmoothie_image" alt="banana smoothie image">
-
+  <img src=<%=bananaSmoothies.source %> class="smoothie_image" alt="banana smoothie image">
+</section>
   <form action="/yousmoothie/smoothieemail" method="post" target="hiddenFrame">
     email: <input id="email" type="email" name="emailaddress">
     <input id="smoothie_name" name="smoothie_name" value="<%= bananaSmoothies.name %>" type="hidden">

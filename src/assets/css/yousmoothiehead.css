@@ -1,0 +1,83 @@
+.blueberry {
+  width: 12%;
+   height: 28%;
+   position: absolute;
+   background: url("../image/blueberries.jpg");
+   background-repeat: no-repeat;
+   top: 83%;
+   left: 37%;
+   transform: translate(-53%, -70%);
+   padding: 10px;
+   border-radius: 20px;
+   border: solid white;
+   overflow: hidden;
+}
+
+.banana{
+  width: 12%;
+ height: 28%;
+ position: absolute;
+ background: url("../image/bananas.jpg");
+ background-repeat: no-repeat;
+ top: 48%;
+ left: 37%;
+ transform: translate(-53%, -70%);
+ padding: 10px;
+ border-radius: 20px;
+ border: solid white;
+ overflow: hidden;
+}
+.strawberry{
+  width: 12%;
+   background: url("../image/strawberries.jpg");
+   background-repeat: no-repeat;
+   height: 28%;
+   position: absolute;
+   top: 83%;
+   left: 64%;
+   margin-right: 10px;
+   transform: translate(-53%, -70%);
+   padding: 10px;
+   border-radius: 20px;
+   border: solid white;
+   overflow: hidden;
+}
+.pineapple{
+  width: 12%;
+    height: 28%;
+    position: absolute;
+    background: url("../image/pineapples.jpg");
+    background-repeat: no-repeat;
+    top: 48%;
+    left: 64%;
+    transform: translate(-53%, -70%);
+    padding: 10px;
+    border-radius: 20px;
+    border: solid white;
+    overflow: hidden;
+}
+.smoothie_data{
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-55%, -45%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid green;
+  overflow: hidden;
+  background-color: white;
+}
+.smoothie_image{
+   border-radius: 20px;
+   border: solid white;
+   overflow: hidden;
+   width: 25%;
+   height: 38%;
+   position: absolute;
+   top: 52%;
+   left: 48%;
+   transform: translate(-53%, -70%);
+   margin: 50px;
+}
