@@ -89,7 +89,7 @@
 .smoothie_recipe{
   font-size: 16px;
   font-weight: 600;
-  top: 30%;
+  top: 29%;
   position: absolute;
 
 }
@@ -132,4 +132,18 @@ bottom: 2%;
 font-size: 22px;
 font-weight: 900;
 }
-#email_
+.smoothie_email{
+  position: relative;
+  left: 45%;
+  width: 20%;
+}
+#email{
+  background-color: white;
+  border: solid #4caf50;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 10px;
+width: 20%;
+}

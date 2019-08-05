@@ -17,16 +17,23 @@
   </header>
 
   <% include ../static/partials/messages.ejs %>
+  <div class="signin_total">
 
-    Sign in
+    <h2>Sign in</h2>
     <form action="/users/signin" method="post">
-
+<div class="email">
       <label for="email">Email</label>
 
-      <input class="email" type="email" name="email" placeholder="Enter email">
+      <input class="email_class" type="email" name="email" placeholder="Enter email">
+</div>
+      <div class="password">
+
       <label for="password">Password</label>
-      <input class="password" type="password" name="password" placeholder="Enter password">
+      <input class="password_class" type="password" name="password" placeholder="Enter password">
+</div>
       <button class="signin" type="submit">Sign in</button>
+    </div>
+
     </form>
 
 </body>

@@ -15,16 +15,17 @@
   color: black;
 }
 .email{
-  background-color: white;
+  background-color: #4caf50;
   padding: 10px;
   border-radius: 20px;
   border: solid white;
   margin-right: 15px;
   margin-bottom: 15px;
   width: 25%;
+  color: white;
 }
 .email_class{
-  background-color: #D0D3D4  ;
+  background-color: white  ;
   padding: 5px;
   border-radius: 20px;
   border: solid white;
@@ -32,13 +33,14 @@
 
 }
 .password{
-  background-color: white;
+  background-color: #4caf50;
   padding: 10px;
   border-radius: 20px;
   border: solid white;
   margin-right: 15px;
   margin-bottom: 15px;
   width: 25%;
+  color: white;
 
 }
 .signup_description{
@@ -46,14 +48,35 @@
   font-weight: 900;
 }
 .password_class{
-  background-color: #D0D3D4  ;
+  background-color: white ;
   padding: 5px;
   border-radius: 20px;
   border: solid white;
   width: 40%;
+}
+.signup_total{
+  left: 2%;
+  position: relative;
+  font-weight: bold;
+}
+.signin_total{
+left: 2%;
+font-weight: bold;
+
+position: relative;
+}
+
+.signin{
+  background-color: #4caf50;
+  padding: 15px;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: solid #4caf50;
 
 }
-.create_account{
+.create_account {
   background-color: #4caf50;
   padding: 15px;
   color: white;
@@ -126,6 +149,7 @@ left: 27%;
 }
 .subject_create{
   border: solid #4caf50;
+  font-weight: bold;
 
   background-color: white;
 }
