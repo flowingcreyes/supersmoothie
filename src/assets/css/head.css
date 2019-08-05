@@ -6,22 +6,31 @@ body {
   font-family: "Lucida Console";
   width: 100%;
   color: black;
+  overflow-x:hidden;
+
+}
+a{
+  text-decoration: none;
+  color: white;
 }
 a:visited {
-  color: white;
+text-decoration: none;
 }
 .navigation {
   bottom: 45px;
   position: relative;
-  left: 68%;
+  left: 65%;
   display: inline-block;
   margin-right: 12px;
   font-size: 20px;
   font-weight: bold;
+  padding: 5px;
+  border-radius: 20px;
+
 }
 .smaller-title {
   text-align: center;
-  left: 40%;
+  left: 35%;
   color: black;
   font-size: 55px;
   font-weight: bold;
@@ -31,13 +40,15 @@ a:visited {
 top: 15%;
 }
 .title {
-  text-align: center;
-  left: 50%;
+  position: relative;
   color: black;
   font-size: 55px;
+  left: 33%;
   font-weight: bold;
   text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
     1px 1px 0 pink;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .dropbtn {
   background-color: #4caf50;
@@ -45,11 +56,15 @@ top: 15%;
   padding: 16px;
   font-size: 16px;
   border: none;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+
 }
 
 .dropdown-content {

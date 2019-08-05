@@ -3,6 +3,8 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
+  <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
+
 </head>
 
 <body>
@@ -16,17 +18,17 @@
         </div>
     </header>
 
-    <h2>Create a Subject</h2>
+    <h2 class="page_description">Share your smoothie!</h2>
     <form action="/smoothieshare/create" method="post">
-      <label for="title">Subject title</label>
-      <input type="text" name="title" placeholder="Subject title">
-      <small class="text-muted" id="titleHelp">title must be 2 or more characters in length.</small>
-      <label for="description">Description</label>
-      <textarea rows="5" name="description" placeholder="Enter Description"></textarea>
-      <small class="text-muted" id="bodyHelp">body must be 10 or more characters in length.</small>
-
-      <button type="submit">Submit</button>
+<div class="subject_title_total">
+      <input type="text" class="subject_title" name="title" placeholder="Smoothie Name">
+</div>
+<div class="subject_description_total">
+      <textarea rows="7" cols="75" class="subject_description" name="description" placeholder="Smoothie Description"></textarea>
+</div>
+      <button class="submit" type="submit">Submit</button>
     </form>
+
 </body>
 
 </html>

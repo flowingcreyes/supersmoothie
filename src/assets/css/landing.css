@@ -1,5 +1,5 @@
 .yousmoothie {
-  width: 19%;
+  width: 20%;
   height: 35%;
   position: absolute;
   top: 50%;
@@ -7,13 +7,16 @@
   transform: translate(-52%, -52%);
   padding: 10px;
   border-radius: 20px;
-  border: solid white;
-  overflow: auto;
+  border: solid #4caf50;
+  overflow:hidden;
   background-color: white;
 }
 .yousmoothie_title {
   font-weight: bold;
   font-size: 30px;
+  left: 13%;
+  position: relative;
+
 }
 .yousmoothie_button {
   background-color: #4caf50;
@@ -25,7 +28,8 @@
   text-decoration: none;
   font-size: 16px;
   margin-top: 20%;
-  transform: translate(40%, -50%);
+  border-radius: 20px;
+ transform: translate(40%, -50%);
 }
 .yousmoothie_description {
   font-weight: bold;
@@ -35,7 +39,7 @@
 }
 
 .smoothieshare {
-  width: 19%;
+  width: 20%;
   height: 35%;
   position: absolute;
   top: 50%;
@@ -44,13 +48,15 @@
   transform: translate(-55%, -52%);
   padding: 10px;
   border-radius: 20px;
-  border: solid white;
-  overflow: auto;
+  border: solid #4caf50;
+  overflow:hidden;
   background-color: white;
 }
 .smoothieshare-title {
   font-weight: bold;
   font-size: 30px;
+  left: 13%;
+  position: relative;
 }
 .smoothieshare-description {
   font-weight: bold;
@@ -68,10 +74,14 @@
   text-decoration: none;
   font-size: 16px;
   width: 50%;
+  border-radius: 20px;
+
   transform: translate(40%, -50%);
   margin-top: 20%;
 }
 .smoothiemonth {
+  overflow:hidden;
+
   width: 35%;
   height: 48%;
   position: absolute;
@@ -80,7 +90,6 @@
   transform: translate(-55%, -45%);
   padding: 10px;
   border-radius: 20px;
-  border: solid white;
-  overflow: hidden;
+  border: solid #4caf50;
   background-color: white;
 }

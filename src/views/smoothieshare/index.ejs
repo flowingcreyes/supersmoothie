@@ -3,6 +3,8 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
+  <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
+
 </head>
 
 <body>
@@ -13,22 +15,22 @@
         SmoothieShare
       </div>
   </header>
-
   <% if(currentUser) { %>
     <a href="smoothieshare/new">
-        <button>Post Recipe</button>
+        <button class="post_recipe">Post Recipe</button>
     </a>
     <% } %>
-
-      <div>
+<div class="smoothieshare_index">
+      <div class="subject_title">
         <% subjectItem.forEach((subject) => { %>
           <ul>
             <a href="/smoothieshare/<%= subject.id %>">
-              <%= subject.title %>
+              •<%= subject.title %>
             </a>
           </ul>
           <% }) %>
       </div>
+</div>
 </body>
 
 </html>

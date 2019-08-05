@@ -3,6 +3,9 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
+  <% include ../static/partials/yousmoothiehead.ejs %>
+
+
 </head>
 
 <body>
@@ -18,7 +21,7 @@
         YouSmoothie
       </div>
   </header>
-
+  <section class="smoothie_data">
   <div class="smoothie_name">
     <%= pineappleSmoothies.name %>
   </div>
@@ -33,20 +36,21 @@
   <div class="smoothie_calories">
     <%= pineappleSmoothies.calories %>
   </div>
-  <div>
-    <img src=<%=pineappleSmoothies.source %> class="smoothie_image" alt="pineapple smoothie image">
-  </div>
-  <form action="/yousmoothie/smoothieemail" method="post" target="hiddenFrame">
-    email: <input id="email" type="email" name="emailaddress">
+  <img src=<%=pineappleSmoothies.source %> class="smoothie_image" alt="pineapple smoothie image">
+</section>
+
+  <form action="/yousmoothie/smoothieemail" id="email_form"method="post" target="hiddenFrame">
+    send smoothie to your email:
+    <input id="email" type="email" name="emailaddress">
     <input id="smoothie_name" name="smoothie_name" value="<%= pineappleSmoothies.name %>" type="hidden">
     <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= pineappleSmoothies.ingredients %>" type="hidden">
     <input id="smoothie_recipe" name="smoothie_recipe" value="<%= pineappleSmoothies.recipe %>" type="hidden">
     <input id="smoothie_calories" name="smoothie_calories" value="<%= pineappleSmoothies.calories %>" type="hidden">
-    <input type="submit" onclick="notice()">
+    <input id="email_button" type="submit" onclick="notice()">
   </form>
   <a href="/yousmoothie/pineapple">
     <img id="reload" src="../../image/reload.png">
-    </a>
+  </a>
   <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
 </body>

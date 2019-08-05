@@ -3,6 +3,8 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
+  <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
+
 </head>
 
 <body>
@@ -13,23 +15,26 @@
         SmoothieShare
       </div>
   </header>
-
+<div class="smoothieshow">
   <h1>
     <%=subject.title %>
   </h1>
+  <br>
+  <br>
+  <p>
   <%- subject.description %>
+</p>
     <p>
       <% if(currentUser) {%>
-        created by
-        <%= currentUser.email %> on
-          <%= subject.createdAt %>
+        >posted by:
+        <%= currentUser.email %>
             <% }%>
     </p>
-
+</div>
     <% if(currentUser && (currentUser.id === subject.userId || currentUser.isAdmin())) { %>
-      <a href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
+      <a class="edit_subject" href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
       <form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit"class="delete_subject">Delete</button>
       </form>
       <% } %>
 </body>
