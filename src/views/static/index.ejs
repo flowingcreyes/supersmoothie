@@ -10,55 +10,55 @@
   <main>
     <header>
       <h1 class="title">Super Smoothie</h1>
+      <% include ./partials/navbar.ejs %>
     </header>
+    <div class="yousmoothie">
+      <section class="yousmoothie_title">
+        YouSmoothie
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </section>
 
-    <% include ./partials/navbar.ejs %>
-
-      <div class="yousmoothie">
-        <section class="yousmoothie_title">
-          YouSmoothie
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </section>
-
-        <section class="yousmoothie_description">
-          Pick a fruit. Any fruit. We'll grab for you a healthy smoothie recipe based on your favorite fruit!
-        </section>
-        <a href="/yousmoothie">
-          <div class="yousmoothie_button">
-            Create Smoothie
-          </div>
-        </a>
-      </div>
-
-      <div class="smoothiemonth">
-
-        <section class="smoothie_name" style="text-align:center;font-size:25px;font-weight: bold;">
-          Chocolate Blueberry Smoothie
-        </section>
-
-        <section class="smoothie_image">
-<img src="../image/blueberrysmoothie4.jpg" style=" border-radius: 10px;height: 10%;width: 55%;position:relative;top : 14px;left : 20%;" class="smoothie_image" alt="smoothie image">
-        </section>
-
-      </div>
-
-      <div class="smoothieshare">
-        <section class="smoothieshare-title">
-          SmoothieShare
-        </section>
-
-        <div class="smoothieshare-description">
-          Create a SmoothieShare account! You can chat with other smoothie lovers and share recipes, tips, and more!
-
+      <section class="yousmoothie_description">
+        Pick a fruit. Any fruit. We'll grab for you a healthy smoothie recipe based on your favorite fruit!
+      </section>
+      <a href="/yousmoothie">
+        <div class="yousmoothie_button">
+          Create Smoothie
         </div>
+      </a>
+    </div>
 
-        <div class="smoothieshare-button">
-          <a href="/smoothieshare/signup">
+    <div class="smoothiemonth">
+      <section class="smoothiemonth_title" style="text-align:center;">
+        Smoothie of the Month
+      </section>
+      <section class="smoothie_name" style="text-align:center;font-size:25px;font-weight: bold;">
+        Chocolate Blueberry Smoothie
+      </section>
+
+      <section class="smoothie_image">
+        <img src="../image/blueberrysmoothie4.jpg" style=" border-radius: 10px;height: 10%;width: 50%;position:relative;top : 10px;left : 22%;" class="smoothie_image" alt="smoothie image">
+      </section>
+
+    </div>
+
+    <div class="smoothieshare">
+      <section class="smoothieshare-title">
+        SmoothieShare
+      </section>
+
+      <div class="smoothieshare-description">
+        Create a SmoothieShare account! You can chat with other smoothie lovers and share recipes, tips, and more!
+
+      </div>
+
+      <div class="smoothieshare-button">
+        <a href="/smoothieshare/signup">
           Create Account
         </a>
-        </div>
       </div>
+    </div>
 
   </main>
 

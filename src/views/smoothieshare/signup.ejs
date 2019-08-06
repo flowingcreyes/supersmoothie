@@ -3,42 +3,43 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-    <% include ../static/partials/messages.ejs %>
     <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
 
 </head>
 
 <body>
-  <header>
-    <h1 class="title">Super Smoothie</h1>
-    <% include ../static/partials/navbar.ejs %>
-      <div class="smaller-title">
-        SmoothieShare
-      </div>
-  </header>
-  <div class="signup_total">
-<section class="signup_description">
-Create a SmoothieShare account!
+  <% include ../static/partials/messages.ejs %>
 
-<p>Share your favorite recipes with other users!</p>
+    <header>
+      <h1 class="title">Super Smoothie</h1>
+      <% include ../static/partials/navbar.ejs %>
+        <div class="smaller-title">
+          SmoothieShare
+        </div>
+    </header>
+    <div class="signup_total">
+      <section class="signup_description">
+        Create a SmoothieShare account!
 
-</section>
-  <form action="/users" method="post">
-    <div class="email">
-    <label for="email">Email</label>
-    <input class="email_class" type="text" name="email" placeholder="email">
-</div>
-<div class="password">
-    <label for="password">Password</label>
-    <input class="password_class" type="password" name="password" placeholder="password">
-  </div>
-  <div class="password">
-    <label for="passwordConfirmation">Password confirmation</label>
-    <input class="password_class" type="password" name="passwordConfirmation" placeholder="confirm password">
-  </div>
-    <input class="create_account" type="submit" value="Create Account">
-  </form>
-</div>
+        <p>Share your favorite recipes with other users!</p>
+
+      </section>
+      <form action="/users" method="post">
+        <div class="email">
+          <label for="email">Email</label>
+          <input class="email_class" type="text" name="email" placeholder="email">
+        </div>
+        <div class="password">
+          <label for="password">Password</label>
+          <input class="password_class" type="password" name="password" placeholder="password">
+        </div>
+        <div class="password">
+          <label for="passwordConfirmation">Password confirmation</label>
+          <input class="password_class" type="password" name="passwordConfirmation" placeholder="confirm password">
+        </div>
+        <input class="create_account" type="submit" value="Create Account">
+      </form>
+    </div>
 </body>
 
 </html>

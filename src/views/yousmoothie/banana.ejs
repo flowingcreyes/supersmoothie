@@ -3,8 +3,7 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-  <% include ../static/partials/yousmoothiehead.ejs %>
-
+    <% include ../static/partials/yousmoothiehead.ejs %>
 
 </head>
 
@@ -22,33 +21,33 @@
       </div>
   </header>
   <section class="smoothie_data">
-  <div class="smoothie_name">
-    <%= bananaSmoothies.name %>
+    <div class="smoothie_name">
+      <%= bananaSmoothies.name %>
+    </div>
+    <div class="smoothie_ingredients">
+      <p>Ingredients</p>
+      <%= bananaSmoothies.ingredients %>
+    </div>
+    <div class="smoothie_recipe">
+      <p>Recipe</p>
+      <%= bananaSmoothies.recipe %>
+    </div>
+    <div class="smoothie_calories">
+      <%= bananaSmoothies.calories %>
+    </div>
+    <img src=<%=bananaSmoothies.source %> class="smoothie_image" alt="banana smoothie image">
+  </section>
+  <div class="smoothie_email">
+    <form action="/yousmoothie/smoothieemail" id="email_form" method="post" target="hiddenFrame">
+      send smoothie to your email:
+      <input id="email" type="email" name="emailaddress">
+      <input id="smoothie_name" name="smoothie_name" value="<%= bananaSmoothies.name %>" type="hidden">
+      <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= bananaSmoothies.ingredients %>" type="hidden">
+      <input id="smoothie_recipe" name="smoothie_recipe" value="<%= bananaSmoothies.recipe %>" type="hidden">
+      <input id="smoothie_calories" name="smoothie_calories" value="<%= bananaSmoothies.calories %>" type="hidden">
+      <input id="email_button" type="submit" onclick="notice()">
+    </form>
   </div>
-  <div class="smoothie_ingredients">
-    <p>Ingredients</p>
-    <%= bananaSmoothies.ingredients %>
-  </div>
-  <div class="smoothie_recipe">
-    <p>Recipe</p>
-    <%= bananaSmoothies.recipe %>
-  </div>
-  <div class="smoothie_calories">
-    <%= bananaSmoothies.calories %>
-  </div>
-  <img src=<%=bananaSmoothies.source %> class="smoothie_image" alt="banana smoothie image">
-</section>
-<div class="smoothie_email">
-  <form action="/yousmoothie/smoothieemail" id="email_form"method="post" target="hiddenFrame">
-    send smoothie to your email:
-    <input id="email" type="email" name="emailaddress">
-    <input id="smoothie_name" name="smoothie_name" value="<%= bananaSmoothies.name %>" type="hidden">
-    <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= bananaSmoothies.ingredients %>" type="hidden">
-    <input id="smoothie_recipe" name="smoothie_recipe" value="<%= bananaSmoothies.recipe %>" type="hidden">
-    <input id="smoothie_calories" name="smoothie_calories" value="<%= bananaSmoothies.calories %>" type="hidden">
-    <input id="email_button" type="submit" onclick="notice()">
-  </form>
-</div>
   <a href="/yousmoothie/banana">
     <img id="reload" src="../../image/reload.png">
   </a>

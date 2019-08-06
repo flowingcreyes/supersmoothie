@@ -3,39 +3,38 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-  <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
+    <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
 
 </head>
 
 <body>
-  <header>
-    <h1 class="title">Super Smoothie</h1>
-    <% include ../static/partials/navbar.ejs %>
-      <div class="smaller-title">
-        SmoothieShare
-      </div>
-  </header>
-
   <% include ../static/partials/messages.ejs %>
-  <div class="signin_total">
 
-    <h2>Sign in</h2>
-    <form action="/users/signin" method="post">
-<div class="email">
-      <label for="email">Email</label>
+    <header>
+      <h1 class="title">Super Smoothie</h1>
+      <% include ../static/partials/navbar.ejs %>
+        <div class="smaller-title">
+          SmoothieShare
+        </div>
+    </header>
 
-      <input class="email_class" type="email" name="email" placeholder="Enter email">
-</div>
-      <div class="password">
+    <div class="signin_total">
 
-      <label for="password">Password</label>
-      <input class="password_class" type="password" name="password" placeholder="Enter password">
-</div>
-      <button class="signin" type="submit">Sign in</button>
+      <h2>Sign in</h2>
+      <form action="/users/signin" method="post">
+        <div class="email">
+          <label for="email">Email</label>
+
+          <input class="email_class" type="email" name="email" placeholder="Enter email">
+        </div>
+        <div class="password">
+
+          <label for="password">Password</label>
+          <input class="password_class" type="password" name="password" placeholder="Enter password">
+        </div>
+        <button class="signin" type="submit">Sign in</button>
     </div>
-
     </form>
-
 </body>
 
 </html>

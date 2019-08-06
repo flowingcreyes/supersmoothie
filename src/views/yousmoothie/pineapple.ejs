@@ -3,8 +3,7 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-  <% include ../static/partials/yousmoothiehead.ejs %>
-
+    <% include ../static/partials/yousmoothiehead.ejs %>
 
 </head>
 
@@ -22,24 +21,24 @@
       </div>
   </header>
   <section class="smoothie_data">
-  <div class="smoothie_name">
-    <%= pineappleSmoothies.name %>
-  </div>
-  <div class="smoothie_ingredients">
-    <p>Ingredients</p>
-    <%= pineappleSmoothies.ingredients %>
-  </div>
-  <div class="smoothie_recipe">
-    <p>Recipe</p>
-    <%= pineappleSmoothies.recipe %>
-  </div>
-  <div class="smoothie_calories">
-    <%= pineappleSmoothies.calories %>
-  </div>
-  <img src=<%=pineappleSmoothies.source %> class="smoothie_image" alt="pineapple smoothie image">
-</section>
+    <div class="smoothie_name">
+      <%= pineappleSmoothies.name %>
+    </div>
+    <div class="smoothie_ingredients">
+      <p>Ingredients</p>
+      <%= pineappleSmoothies.ingredients %>
+    </div>
+    <div class="smoothie_recipe">
+      <p>Recipe</p>
+      <%= pineappleSmoothies.recipe %>
+    </div>
+    <div class="smoothie_calories">
+      <%= pineappleSmoothies.calories %>
+    </div>
+    <img src=<%=pineappleSmoothies.source %> class="smoothie_image" alt="pineapple smoothie image">
+  </section>
 
-  <form action="/yousmoothie/smoothieemail" id="email_form"method="post" target="hiddenFrame">
+  <form action="/yousmoothie/smoothieemail" id="email_form" method="post" target="hiddenFrame">
     send smoothie to your email:
     <input id="email" type="email" name="emailaddress">
     <input id="smoothie_name" name="smoothie_name" value="<%= pineappleSmoothies.name %>" type="hidden">

@@ -3,7 +3,6 @@ const Subjects = require("./models").Subjects;
 const Authorizer = require("../policies/subjects");
 const Users = require("../db/models").Users;
 
-
 module.exports = {
   getSubjects(callback) {
     return Subjects.findAll()

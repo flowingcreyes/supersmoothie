@@ -1,62 +1,62 @@
 .blueberry {
   width: 12%;
-   height: 28%;
-   position: absolute;
-   background: url("../image/blueberries.jpg");
-   background-repeat: no-repeat;
-   top: 83%;
-   left: 34%;
-   transform: translate(-53%, -70%);
-   padding: 10px;
-   border-radius: 20px;
-   border: solid white;
-   overflow: hidden;
+  height: 28%;
+  position: absolute;
+  background: url("../image/blueberries.jpg");
+  background-repeat: no-repeat;
+  top: 83%;
+  left: 34%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
 }
 
-.banana{
+.banana {
   width: 12%;
- height: 28%;
- position: absolute;
- background: url("../image/bananas.jpg");
- background-repeat: no-repeat;
- top: 48%;
- left: 34%;
- transform: translate(-53%, -70%);
- padding: 10px;
- border-radius: 20px;
- border: solid white;
- overflow: hidden;
+  height: 28%;
+  position: absolute;
+  background: url("../image/bananas.jpg");
+  background-repeat: no-repeat;
+  top: 48%;
+  left: 34%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
 }
-.strawberry{
+.strawberry {
   width: 12%;
-   background: url("../image/strawberries.jpg");
-   background-repeat: no-repeat;
-   height: 28%;
-   position: absolute;
-   top: 83%;
-   left: 61%;
-   margin-right: 10px;
-   transform: translate(-53%, -70%);
-   padding: 10px;
-   border-radius: 20px;
-   border: solid white;
-   overflow: hidden;
+  background: url("../image/strawberries.jpg");
+  background-repeat: no-repeat;
+  height: 28%;
+  position: absolute;
+  top: 83%;
+  left: 61%;
+  margin-right: 10px;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
 }
-.pineapple{
+.pineapple {
   width: 12%;
-    height: 28%;
-    position: absolute;
-    background: url("../image/pineapples.jpg");
-    background-repeat: no-repeat;
-    top: 48%;
-    left: 61%;
-    transform: translate(-53%, -70%);
-    padding: 10px;
-    border-radius: 20px;
-    border: solid white;
-    overflow: hidden;
+  height: 28%;
+  position: absolute;
+  background: url("../image/pineapples.jpg");
+  background-repeat: no-repeat;
+  top: 48%;
+  left: 61%;
+  transform: translate(-53%, -70%);
+  padding: 10px;
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
 }
-.smoothie_data{
+.smoothie_data {
   width: 50%;
   height: 70%;
   position: relative;
@@ -68,53 +68,51 @@
   overflow: hidden;
   background-color: white;
 }
-.smoothie_image{
-   border-radius: 20px;
-   border: solid white;
-   overflow: hidden;
-   min-width: 23%;
-   height: 38%;
-   position: absolute;
-   top: 72%;
-   left: 50%;
-   transform: translate(-53%, -70%);
-   margin: 50px;
+.smoothie_image {
+  border-radius: 20px;
+  border: solid white;
+  overflow: hidden;
+  min-width: 23%;
+  height: 38%;
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-53%, -70%);
+  margin: 50px;
 }
-.smoothie_name{
+.smoothie_name {
   font-size: 30px;
   font-weight: 900;
 }
-.smoothie_recipe{
+.smoothie_recipe {
   font-size: 16px;
   font-weight: 600;
   top: 29%;
   position: absolute;
   margin-right: 2px;
-
 }
-.smoothie_ingredients{
+.smoothie_ingredients {
   font-size: 16px;
   font-weight: 600;
   top: 10%;
   position: absolute;
   margin-right: 2px;
-
 }
-.smoothie_calories{
+.smoothie_calories {
   font-size: 15px;
   font-weight: 600;
   position: absolute;
   left: 43%;
-top: 95%;
+  top: 95%;
 }
-#reload{
+#reload {
   height: 35px;
   text-align: center;
   left: 32%;
   position: absolute;
-top: 16%;
+  top: 16%;
 }
-#email_button{
+#email_button {
   background-color: #4caf50;
   border: none;
   color: white;
@@ -125,22 +123,22 @@ top: 16%;
   font-size: 16px;
   margin-top: 12%;
   position: relative;
-left: 60%;
+  left: 60%;
 }
-#email_form{
-position: relative;
-left: 78%;
-bottom: 55%;
-width: 10%;
-font-size: 22px;
-font-weight: 900;
+#email_form {
+  position: relative;
+  left: 78%;
+  bottom: 55%;
+  width: 10%;
+  font-size: 22px;
+  font-weight: 900;
 }
-.smoothie_email{
+.smoothie_email {
   position: relative;
   left: 45%;
   width: 20%;
 }
-#email{
+#email {
   margin-top: 10px;
   background-color: white;
   border: solid #4caf50;
@@ -149,5 +147,5 @@ font-weight: 900;
   border-radius: 10px;
   font-weight: bold;
   font-size: 14px;
-width: 100%;
+  width: 100%;
 }

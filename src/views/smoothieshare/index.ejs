@@ -3,34 +3,36 @@
 
 <head>
   <% include ../static/partials/head.ejs %>
-  <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
+    <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
 
 </head>
 
 <body>
-  <header>
-    <h1 class="title">Super Smoothie</h1>
-    <% include ../static/partials/navbar.ejs %>
-      <div class="smaller-title">
-        SmoothieShare
-      </div>
-  </header>
-  <% if(currentUser) { %>
-    <a href="smoothieshare/new">
+  <% include ../static/partials/messages.ejs %>
+
+    <header>
+      <h1 class="title">Super Smoothie</h1>
+      <% include ../static/partials/navbar.ejs %>
+        <div class="smaller-title">
+          SmoothieShare
+        </div>
+    </header>
+    <% if(currentUser) { %>
+      <a href="smoothieshare/new">
         <button class="post_recipe">Post Recipe</button>
     </a>
-    <% } %>
-<div class="smoothieshare_index">
-      <div class="subject_title">
-        <% subjectItem.forEach((subject) => { %>
-          <ul>
-            <a href="/smoothieshare/<%= subject.id %>">
+      <% } %>
+        <div class="smoothieshare_index">
+          <div class="subject_title">
+            <% subjectItem.forEach((subject) => { %>
+              <ul>
+                <a href="/smoothieshare/<%= subject.id %>">
               •<%= subject.title %>
             </a>
-          </ul>
-          <% }) %>
-      </div>
-</div>
+              </ul>
+              <% }) %>
+          </div>
+        </div>
 </body>
 
 </html>

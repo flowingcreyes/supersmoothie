@@ -9,7 +9,6 @@ module.exports = {
       next();
     }
   },
-
   comparePass(userPassword, databasePassword) {
     return bcrypt.compareSync(userPassword, databasePassword);
   }

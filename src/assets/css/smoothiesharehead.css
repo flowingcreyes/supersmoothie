@@ -1,4 +1,4 @@
-.subject_title{
+.subject_title {
   color: black;
   width: 60%;
   border-radius: 20px;
@@ -6,15 +6,15 @@
   overflow: auto;
   margin-top: 5px;
 }
-.smoothieshare_index{
+.smoothieshare_index {
   width: 70%;
   position: absolute;
   left: 10%;
 }
-.subject_title a{
+.subject_title a {
   color: black;
 }
-.email{
+.email {
   background-color: #4caf50;
   padding: 10px;
   border-radius: 20px;
@@ -24,15 +24,14 @@
   width: 25%;
   color: white;
 }
-.email_class{
-  background-color: white  ;
+.email_class {
+  background-color: white;
   padding: 5px;
   border-radius: 20px;
   border: solid white;
   width: 40%;
-
 }
-.password{
+.password {
   background-color: #4caf50;
   padding: 10px;
   border-radius: 20px;
@@ -41,32 +40,31 @@
   margin-bottom: 15px;
   width: 25%;
   color: white;
-
 }
-.signup_description{
+.signup_description {
   font-size: 25px;
   font-weight: 900;
 }
-.password_class{
-  background-color: white ;
+.password_class {
+  background-color: white;
   padding: 5px;
   border-radius: 20px;
   border: solid white;
   width: 40%;
 }
-.signup_total{
+.signup_total {
   left: 2%;
   position: relative;
   font-weight: bold;
 }
-.signin_total{
-left: 2%;
-font-weight: bold;
+.signin_total {
+  left: 2%;
+  font-weight: bold;
 
-position: relative;
+  position: relative;
 }
 
-.signin{
+.signin {
   background-color: #4caf50;
   padding: 15px;
   color: white;
@@ -74,7 +72,6 @@ position: relative;
   border-radius: 20px;
   font-weight: bold;
   border: solid #4caf50;
-
 }
 .create_account {
   background-color: #4caf50;
@@ -84,9 +81,8 @@ position: relative;
   border-radius: 20px;
   font-weight: bold;
   border: solid #4caf50;
-
 }
-.signin{
+.signin {
   background-color: #4caf50;
   border: solid #4caf50;
   color: white;
@@ -94,7 +90,7 @@ position: relative;
   border-radius: 20px;
   font-weight: bold;
 }
-.post_recipe{
+.post_recipe {
   background-color: #4caf50;
   border: solid #4caf50;
   color: white;
@@ -104,7 +100,7 @@ position: relative;
   position: relative;
   left: 10%;
 }
-.submit{
+.submit {
   background-color: #4caf50;
   border: solid #4caf50;
   color: white;
@@ -112,12 +108,12 @@ position: relative;
   border-radius: 20px;
   font-weight: bold;
 }
-.subject_title_total{
-left: 27%;
+.subject_title_total {
+  left: 27%;
   position: absolute;
   width: 35%;
 }
-.subject_title{
+.subject_title {
   background-color: white;
   border: solid #4caf50;
   color: black;
@@ -127,12 +123,12 @@ left: 27%;
   width: 100%;
   font-size: 20px;
 }
-.subject_description_total{
+.subject_description_total {
   top: 45%;
   left: 27%;
   position: absolute;
 }
-.subject_description{
+.subject_description {
   font-size: 20px;
   width: 75%;
   background-color: white;
@@ -142,23 +138,22 @@ left: 27%;
   border-radius: 20px;
   font-weight: bold;
 }
-.submit{
+.submit {
   top: 75%;
   position: absolute;
   left: 67%;
 }
-.subject_create{
+.subject_create {
   border: solid #4caf50;
   font-weight: bold;
 
   background-color: white;
 }
-.page_description{
+.page_description {
   position: relative;
   left: 36%;
-
 }
-.smoothieshow{
+.smoothieshow {
   width: 45%;
   height: 52%;
   position: absolute;
@@ -171,7 +166,7 @@ left: 27%;
   overflow: hidden;
   background-color: white;
 }
-.edit_subject{
+.edit_subject {
   background-color: #4caf50;
   border: solid #4caf50;
   color: white;
@@ -182,7 +177,7 @@ left: 27%;
   position: absolute;
   left: 61%;
 }
-.delete_subject{
+.delete_subject {
   background-color: #4caf50;
   border: solid #4caf50;
   color: white;
@@ -193,4 +188,4 @@ left: 27%;
   position: absolute;
   left: 66%;
 }
-.
+.;

@@ -8,24 +8,26 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="title">Super Smoothie</h1>
-    <% include ../static/partials/navbar.ejs %>
-      <div class="smaller-title">
-        SmoothieShare
-      </div>
-  </header>
+  <% include ../static/partials/messages.ejs %>
 
-  <h2 class="page_description">Edit Your Subject</h2>
-  <form action="/smoothieshare/<%= subject.id %>/update" method="post">
-    <div class="subject_title_total">
-          <input type="text" value="<%= subject.title %>" class="subject_title" name="title" placeholder="Smoothie Name">
-    </div>
-        <div class="subject_description_total">
-          <textarea rows="7" cols="75" class="subject_description" name="description" placeholder="Smoothie Description"><%= subject.description %></textarea>
-    </div>
-        <button class="submit" type="submit">Update</button>
-  </form>
+    <header>
+      <h1 class="title">Super Smoothie</h1>
+      <% include ../static/partials/navbar.ejs %>
+        <div class="smaller-title">
+          SmoothieShare
+        </div>
+    </header>
+
+    <h2 class="page_description">Edit Your Subject</h2>
+    <form action="/smoothieshare/<%= subject.id %>/update" method="post">
+      <div class="subject_title_total">
+        <input type="text" value="<%= subject.title %>" class="subject_title" name="title" placeholder="Smoothie Name">
+      </div>
+      <div class="subject_description_total">
+        <textarea rows="7" cols="75" class="subject_description" name="description" placeholder="Smoothie Description"><%= subject.description %></textarea>
+      </div>
+      <button class="submit" type="submit">Update</button>
+    </form>
 </body>
 
 </html>
