@@ -4,9 +4,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Lucida Console";
-  width: 100%;
   color: black;
-
+  overflow-x: hidden;
+width: 100%;
 }
 a{
   text-decoration: none;
@@ -16,33 +16,30 @@ a:visited {
 text-decoration: none;
 }
 .navigation {
-  bottom: 45px;
+  bottom: 42px;
   position: relative;
   left: 65%;
   display: inline-block;
   margin-right: 12px;
-  font-size: 20px;
+    font-size: 20px;
   font-weight: bold;
   padding: 5px;
-  border-radius: 20px;
-
 }
 .smaller-title {
-  text-align: center;
   left: 35%;
   color: black;
   font-size: 55px;
   font-weight: bold;
   text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
     1px 1px 0 pink;
-    position: absolute;
-top: 15%;
+  position: absolute;
+  top: 15%;
 }
 .title {
   position: relative;
   color: black;
   font-size: 55px;
-  left: 33%;
+  left: 32%;
   font-weight: bold;
   text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
     1px 1px 0 pink;

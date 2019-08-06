@@ -27,7 +27,7 @@
     <p>
       <% if(currentUser) {%>
         >posted by:
-        <%= currentUser.email %>
+        <%= JSON.stringify({subject}) %>
             <% }%>
     </p>
 </div>
