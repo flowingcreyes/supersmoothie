@@ -118,6 +118,7 @@ module.exports = {
         req.flash("notice", "Sign in failed! Try again!");
         res.redirect("/smoothieshare/signin");
       } else {
+        console.log("yum")
         req.flash("notice", "Success!");
         res.redirect("/");
       }
