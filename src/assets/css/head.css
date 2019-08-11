@@ -23,9 +23,7 @@ body {
      position: relative;
      left: 100%;
      color: transparent;
-
 }
-
 a {
   text-decoration: none;
   color: white;
@@ -36,15 +34,16 @@ a:visited {
 .navigation {
   bottom: 42px;
   position: relative;
-  left: 65%;
+  left: 66%;
   display: inline-block;
   margin-right: 12px;
+  margin-left: 12px;
   font-size: 20px;
   font-weight: bold;
   padding: 5px;
 }
 .smaller-title {
-  left: 35%;
+  left: 36%;
   color: black;
   font-size: 55px;
   font-weight: bold;
@@ -57,7 +56,7 @@ a:visited {
   position: relative;
   color: black;
   font-size: 55px;
-  left: 32%;
+  left: 34%;
   font-weight: bold;
   text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
     1px 1px 0 pink;
@@ -74,12 +73,10 @@ a:visited {
   border-radius: 20px;
   font-weight: bold;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -88,24 +85,19 @@ a:visited {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 10px;
-
 }
-
 .dropdown-content a {
   color: black;
   padding: 4px 6px;
   text-decoration: none;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }

@@ -1,3 +1,8 @@
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 .blueberry {
   width: 12%;
   height: 28%;
@@ -107,7 +112,7 @@
 }
 #reload {
   height: 35px;
-  left: 31%;
+  left: 33%;
   position: absolute;
   top: 15%;
 }
@@ -131,7 +136,7 @@
   left: 77%;
   bottom: 55%;
   width: 10%;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 900;
 }
 #email {
