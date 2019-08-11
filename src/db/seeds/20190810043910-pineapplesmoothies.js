@@ -39,7 +39,10 @@ let pineappleSmoothies = [{
   source: '../../image/pineapplesmoothie4.jpg',
   createdAt: '8/9/19',
   updatedAt: '8/9/19'
- }
+},
+{
+  id: 5, name: 'Refreshing Watermelon Pineapple Smoothie', ingredients: '1/2 cup frozen pineapple chunks, 1/2 cup frozen raspberries, 3/4 cup fresh diced seedless watermelon, 1/4 cup Almond Breeze Almondmilk Unsweetened Vanilla', recipe: "In a blender, place all ingredients together and blend until smooth. If necessary add in more almond milk just a tablespoon or two at a time until you get a nice thick smoothie consistency. Pour into a chilled glass or into a pineapple that's been carved in the middle.", calories: '145 calories per cup', source: '../../image/pineapplesmoothie5.jpg', createdAt: '8/11/19', updatedAt: '8/11/19'
+}
 ]
 
 module.exports = {

@@ -38,7 +38,10 @@ let bananaSmoothies = [{
   source: '../../image/bananasmoothie4.jpg',
   createdAt: '8/9/19',
   updatedAt: '8/9/19'
- }
+},
+{
+  id: 5, name: 'Green Banana Mint Smoothie', ingredients: '1 cup unsweetened almond milk, 3 cups baby spinach, 1 frozen banana, 1 scoop protein powder, 3 tbsp mint, 2 tbsp flaxseeds, 1 cup ice', recipe: 'Add all ingredients to a blender and blend until smooth.', calories:  '140 calories per cup' , source:  '../../image/bananasmoothie5.jpg', createdAt: '8/11/19', updatedAt: '8/11/19'
+}
 ]
 
 module.exports = {

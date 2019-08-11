@@ -13,7 +13,11 @@
     }
   </script>
   <header>
+    <a href="/">
+
     <h1 class="title">Super Smoothie</h1>
+  </a>
+
     <% include ../static/partials/navbar.ejs %>
       <div class="smaller-title">
         YouSmoothie
@@ -38,7 +42,7 @@
   </section>
 
   <form action="/yousmoothie/smoothieemail" id="email_form" method="post" target="hiddenFrame">
-    send smoothie to your email:
+    send this smoothie to your email:
     <input id="email" type="email" name="emailaddress">
     <input id="smoothie_name" name="smoothie_name" value="<%= strawberrySmoothies.name %>" type="hidden">
     <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= strawberrySmoothies.ingredients %>" type="hidden">

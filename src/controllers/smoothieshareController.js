@@ -119,7 +119,7 @@ module.exports = {
         res.redirect("/smoothieshare/signin");
       } else {
         console.log("yum")
-        req.flash("notice", "Success!");
+        req.flash("notice", "Successfully signed in!");
         res.redirect("/");
       }
     });

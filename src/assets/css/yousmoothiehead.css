@@ -34,7 +34,7 @@
   height: 28%;
   position: absolute;
   top: 83%;
-  left: 61%;
+  left: 60%;
   margin-right: 10px;
   transform: translate(-53%, -70%);
   padding: 10px;
@@ -49,7 +49,7 @@
   background: url("../image/pineapples.jpg");
   background-repeat: no-repeat;
   top: 48%;
-  left: 61%;
+  left: 60%;
   transform: translate(-53%, -70%);
   padding: 10px;
   border-radius: 20px;
@@ -107,10 +107,9 @@
 }
 #reload {
   height: 35px;
-  text-align: center;
-  left: 32%;
+  left: 31%;
   position: absolute;
-  top: 16%;
+  top: 15%;
 }
 #email_button {
   background-color: #4caf50;
@@ -123,27 +122,24 @@
   font-size: 16px;
   margin-top: 12%;
   position: relative;
+  border-radius: 20px;
+
   left: 60%;
 }
 #email_form {
   position: relative;
-  left: 78%;
+  left: 77%;
   bottom: 55%;
   width: 10%;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 900;
-}
-.smoothie_email {
-  position: relative;
-  left: 45%;
-  width: 20%;
 }
 #email {
   margin-top: 10px;
   background-color: white;
   border: solid #4caf50;
   color: black;
-  padding: 15px;
+  padding: 13px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 14px;

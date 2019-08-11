@@ -39,7 +39,10 @@ let blueberrySmoothies = [{
   source: '../../image/blueberrysmoothie4.jpg',
   createdAt: '8/9/19',
   updatedAt: '8/9/19'
- }
+},
+{
+  id: 5, name: 'Cherry-Blueberry Banana Smoothies', ingredients: '1½ cups frozen unsweetened pitted dark sweet cherries or sour cherries, 1 cup unsweetened vanilla-flavored almond milk, 1 small banana, peeled, ½ cup fresh or frozen unsweetened blueberries,  6-ounce carton blueberry-flavored fat-free Greek yogurt', recipe: 'In a blender combine cherries, almond milk, yogurt, blueberries, and banana. Cover and blend until smooth. Pour into glasses to serve.', calories: '105 calories per cup', source: '../../image/blueberrysmoothie5.jpg', createdAt: '8/11/19', updatedAt: '8/11/19'
+}
 ]
 
 module.exports = {

@@ -8,6 +8,24 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+.alert{
+  left: 2%;
+  position: absolute;
+  top: 1%;
+}
+.close{
+  background-color: Transparent;
+     background-repeat:no-repeat;
+     border: none;
+     cursor:pointer;
+     overflow: hidden;
+     outline:none;
+     position: relative;
+     left: 100%;
+     color: transparent;
+
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -33,7 +51,7 @@ a:visited {
   text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
     1px 1px 0 pink;
   position: absolute;
-  top: 15%;
+  top: 14%;
 }
 .title {
   position: relative;
@@ -69,6 +87,8 @@ a:visited {
   min-width: 220px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 10px;
+
 }
 
 .dropdown-content a {

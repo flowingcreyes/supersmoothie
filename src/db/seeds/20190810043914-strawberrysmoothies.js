@@ -39,7 +39,10 @@ let strawberrySmoothies = [{
   source: '../../image/strawberrysmoothie4.jpg',
   createdAt: '8/9/19',
   updatedAt: '8/9/19'
- }
+},
+{
+  id: 5, name: 'Strawberry Mint Smoothie', ingredients: '8 ounces strawberries (hulled and frozen), 1/2 cup vanilla yogurt, 1 cup milk (skim, reduced fat, or whole), 1 tablespoon honey, 10–12 leaves fresh mint)', recipe: 'Place all ingredients in a high powered blender. Process until fully blended and smooth. Taste test and adjust ingredients, if necessary. Pour into glasses and serve immediately.', calories:  'N/A', source: '../../image/strawberrysmoothie5.jpg', createdAt:  '8/11/19', updatedAt: '8/11/19'
+}
 ]
 
 module.exports = {
