@@ -3,7 +3,7 @@ const smoothieshareQueries = require("../db/queries.smoothieshare.js");
 const passport = require("passport");
 const Authorizer = require("../policies/subjects");
 const markdown = require("markdown").markdown;
-const Users = require("../db/models").Users;
+const Users = require("../db/models").User;
 
 module.exports = {
   index(req, res, next) {

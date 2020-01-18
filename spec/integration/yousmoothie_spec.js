@@ -2,7 +2,7 @@ const request = require("request");
 const server = require("../../src/server.js");
 const base = "http://localhost:3000/yousmoothie/";
 const sequelize = require("../../src/db/models/index").sequelize;
-const bananaSmoothie = require("../../src/db/models").bananasmoothie;
+const bananaSmoothie = require("../../src/db/models").bananaSmoothie;
 
 describe("routes:yousmoothie", () => {
   describe("GET /yousmoothie", () => {

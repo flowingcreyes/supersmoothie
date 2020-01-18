@@ -1,7 +1,7 @@
 const sequelize = require("../../src/db/models/index").sequelize;
-const Subjects = require("./models").Subjects;
+const Subjects = require("./models").Subject;
 const Authorizer = require("../policies/subjects");
-const Users = require("../db/models").Users;
+const Users = require("../db/models").User;
 
 module.exports = {
   getSubjects(callback) {

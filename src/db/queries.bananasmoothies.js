@@ -1,8 +1,8 @@
-const bananaSmoothies = require("./models").bananasmoothie;
+const bananaSmoothies = require("./models").bananaSmoothie;
 const sequelize = require("../../src/db/models/index").sequelize;
 
 module.exports = {
-  retrieveBananaSmoothies(callback) {
+  retrievebananaSmoothies(callback) {
     return bananaSmoothies
       .findOne({
         order: [[sequelize.fn("RANDOM")]]

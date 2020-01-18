@@ -1,7 +1,7 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  const strawberrysmoothie = sequelize.define(
-    "strawberrysmoothie",
+  const strawberrySmoothie = sequelize.define(
+    "strawberrySmoothie",
     {
       name: DataTypes.STRING,
       ingredients: DataTypes.TEXT,
@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  strawberrysmoothie.associate = function(models) {
+  strawberrySmoothie.associate = function(models) {
     //    associations can be defined here
   };
-  return strawberrysmoothie;
+  return strawberrySmoothie;
 };

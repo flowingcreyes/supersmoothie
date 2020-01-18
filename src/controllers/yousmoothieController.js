@@ -1,7 +1,7 @@
-const strawberrySmoothieQueries = require("../db/queries.strawberrysmoothies.js");
-const bananaSmoothieQueries = require("../db/queries.bananasmoothies.js");
-const blueberrySmoothieQueries = require("../db/queries.blueberrysmoothies.js");
-const pineappleSmoothieQueries = require("../db/queries.pineapplesmoothies.js");
+const strawberrySmoothieQueries = require("../db/queries.strawberrySmoothies.js");
+const bananaSmoothieQueries = require("../db/queries.bananaSmoothies.js");
+const blueberrySmoothieQueries = require("../db/queries.blueberrySmoothies.js");
+const pineappleSmoothieQueries = require("../db/queries.pineappleSmoothies.js");
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   blueberry(req, res, next) {
-    blueberrySmoothieQueries.retrieveBlueberrySmoothies(
+    blueberrySmoothieQueries.retrieveblueberrySmoothies(
       (err, blueberrySmoothies) => {
         if (err) {
           res.redirect(500, "/");
@@ -23,7 +23,7 @@ module.exports = {
   },
 
   strawberry(req, res, next) {
-    strawberrySmoothieQueries.retrieveStrawberrySmoothies(
+    strawberrySmoothieQueries.retrievestrawberrySmoothies(
       (err, strawberrySmoothies) => {
         if (err) {
           res.redirect(500, "/");
@@ -35,7 +35,7 @@ module.exports = {
   },
 
   banana(req, res, next) {
-    bananaSmoothieQueries.retrieveBananaSmoothies((err, bananaSmoothies) => {
+    bananaSmoothieQueries.retrievebananaSmoothies((err, bananaSmoothies) => {
       if (err) {
         console.log(err);
         res.redirect(500, "/");
@@ -45,7 +45,7 @@ module.exports = {
     });
   },
   pineapple(req, res, next) {
-    pineappleSmoothieQueries.retrievePineappleSmoothies(
+    pineappleSmoothieQueries.retrievepineappleSmoothies(
       (err, pineappleSmoothies) => {
         if (err) {
           res.redirect(500, "/");

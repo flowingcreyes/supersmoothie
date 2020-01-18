@@ -2,15 +2,15 @@ const request = require("request");
 const server = require("../../src/server");
 const base = "http://localhost:3000/smoothieshare/";
 const sequelize = require("../../src/db/models/index").sequelize;
-const Subjects = require("../../src/db/models").Subjects;
-const Users = require("../../src/db/models").Users;
+const Subject = require("../../src/db/models").Subject;
+const User = require("../../src/db/models").User;
 
-describe("ADMIN routes : subjects", () => {
+describe("ADMIN routes : Subject", () => {
   beforeEach(done => {
     this.subject;
     this.user;
     sequelize.sync({ force: true }).then(res => {
-      Users.create({
+      User.create({
         email: "adminboy@gmail.com",
         password: "secretmeat3",
         role: "admin"
@@ -28,7 +28,7 @@ describe("ADMIN routes : subjects", () => {
           request.get(mockAuth, (err, res, body) => {});
         })
         .then(res => {
-          Subjects.create({
+          Subject.create({
             title: "Sam Smoothie",
             description:
               "I TRIED THIS SMOOTHIE AND IT WAS INCREDIBLE! GOOGLE IT!",
@@ -46,7 +46,7 @@ describe("ADMIN routes : subjects", () => {
     });
   });
   describe("GET /smoothieshare", () => {
-    it("will return a status code 200 and all of the the subjects", done => {
+    it("will return a status code 200 and all of the the Subject", done => {
       console.log(this.user.id);
       request.get(base, (err, res, body) => {
         expect(res.statusCode).toBe(200);
@@ -77,7 +77,7 @@ describe("ADMIN routes : subjects", () => {
         }
       };
       request.post(data, (err, res, body) => {
-        Subjects.findOne({
+        Subject.findOne({
           where: {
             description:
               "I absolutely adore coconut smoothies! Nothing beats them"
@@ -104,7 +104,7 @@ describe("ADMIN routes : subjects", () => {
         }
       };
       request.post(option, (err, res, body) => {
-        Subjects.findOne({ where: { title: "1" } })
+        Subject.findOne({ where: { title: "1" } })
           .then(subject => {
             expect(subject).toBeNull();
             done();
@@ -139,13 +139,13 @@ describe("ADMIN routes : subjects", () => {
   });
   describe("POST /smoothieshare/:id/destroy", () => {
     it("will delete the subject with the associated ID", done => {
-      Subjects.findAll().then(subjects => {
-        const subjectsBeforeDelete = subjects.length;
-        expect(subjectsBeforeDelete).toBe(1);
+      Subject.findAll().then(Subject => {
+        const SubjectBeforeDelete = Subject.length;
+        expect(SubjectBeforeDelete).toBe(1);
         request.post(`${base}${this.subject.id}/destroy`, (err, res, body) => {
-          Subjects.findAll().then(subjects => {
+          Subject.findAll().then(Subject => {
             expect(err).toBeNull();
-            expect(subjects.length).toBe(subjectsBeforeDelete - 1);
+            expect(Subject.length).toBe(SubjectBeforeDelete - 1);
             done();
           });
         });
@@ -173,7 +173,7 @@ describe("ADMIN routes : subjects", () => {
       };
       request.post(options, (err, res, body) => {
         expect(err).toBeNull();
-        Subjects.findOne({
+        Subject.findOne({
           where: { id: this.subject.id }
         }).then(subject => {
           console.log(this.subject.id);
@@ -183,17 +183,17 @@ describe("ADMIN routes : subjects", () => {
       });
     });
   });
-  describe("POST /users", () => {
+  describe("POST /User", () => {
     it("will create a user account", done => {
       const options = {
-        url: "http://localhost:3000/users",
+        url: "http://localhost:3000/User",
         form: {
           email: "donaldduck@gmail.com",
           password: "98789896!"
         }
       };
       request.post(options, (err, res, body) => {
-        Users.findOne({
+        User.findOne({
           where: { email: "donaldduck@gmail.com" }
         })
           .then(user => {
