@@ -1,32 +1,107 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
 
 <head>
- 
+  <title>SuperSmoothie</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <base href="/"> 
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  <noscript><link rel="stylesheet"  type="text/css" href="../css/noscript.css" /></noscript>   
 </head>
 
-<body>
+<body class="is-preload">
   <%- include ('../static/partials/messages.ejs') %>
-    <header>
-      <a href="/">
-      <h1 class="title">Super Smoothie</h1>
-    </a>
 
-        <div class="smaller-title">
-          SmoothieShare
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+
+          <!-- Logo -->
+          <a href="/" class="logo">
+        <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">SuperSmoothie</span>
+      </a>
+
+          <!-- Nav -->
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+          <!-- Menu -->
+          <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+              <% if (currentUser) {%>
+                <li><a href="/">Home</a></li>
+                <li><a href="/yousmoothie">YouSmoothie</a></li>
+                <li><a href="/smoothieshare">SmoothieShare</a></li>
+                <li><a href="/smoothieshare/signout">Sign Out</a></li>
+                <% } %>
+                  <% if (!currentUser) {%>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/yousmoothie">YouSmoothie</a></li>
+                    <li><a href="/smoothieshare">SmoothieShare</a></li>
+                    <li><a href="/smoothieshare/signup">Create SmoothieShare Account</a></li>
+                    <li><a href="/smoothieshare/signin">Sign In</a></li>
+                    <% } %>
+            </ul>
+          </nav>
         </div>
-    </header>
+      </header>
+      <!-- Main -->
+      <div id="main">
+        <h2 class="page_description">Edit Your Subject</h2>
+        <form action="/smoothieshare/<%= subject.id %>/update" method="post">
+          <div class="subject_title_total">
+            <input type="text" value="<%= subject.title %>" class="subject_title" name="title" placeholder="Smoothie Name">
+          </div>
+          <div class="subject_description_total">
+            <textarea rows="7" cols="75" class="subject_description" name="description" placeholder="Smoothie Description"><%= subject.description %></textarea>
+          </div>
+          <button class="submit" type="submit">Update</button>
+        </form>
 
-    <h2 class="page_description">Edit Your Subject</h2>
-    <form action="/smoothieshare/<%= subject.id %>/update" method="post">
-      <div class="subject_title_total">
-        <input type="text" value="<%= subject.title %>" class="subject_title" name="title" placeholder="Smoothie Name">
       </div>
-      <div class="subject_description_total">
-        <textarea rows="7" cols="75" class="subject_description" name="description" placeholder="Smoothie Description"><%= subject.description %></textarea>
-      </div>
-      <button class="submit" type="submit">Update</button>
-    </form>
+
+      <!-- Footer -->
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in touch</h2>
+            <form method="post" action="#">
+              Coming soon!
+            </form>
+          </section>
+          <section>
+            <h2>Share</h2>
+            <ul class="icons">
+
+              <li> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </li>
+            </ul>
+          </section>
+          <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+    <script src="../js/breakpoints.min.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/main.js"></script>
+
 </body>
 
 </html>

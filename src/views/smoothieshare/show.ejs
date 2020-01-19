@@ -23,6 +23,8 @@
 			  </style>
 	</head>
 	<body class="is-preload">
+		<%- include ('../static/partials/messages.ejs') %>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -49,13 +51,19 @@
                 
                 posted by: <%= currentUser.email %>
                   <% }%>
-            </p>
+			</p>
+			<% if(currentUser && (currentUser.id == subject.userId || currentUser.isAdmin())) { %>
+				<button class="edit_subject"><a href="/smoothieshare/<%= subject.id %>/edit">Edit</a></button>
+				<form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
+				  <button type="submit" class="delete_subject">Delete</button>
+				</form>
+				<% } %>
 					</div>
 
 			<!-- Footer -->
 			<%- include ('../static/partials/footer.ejs') %>
 
-
+		
 	</div>
 
 <!-- Scripts -->

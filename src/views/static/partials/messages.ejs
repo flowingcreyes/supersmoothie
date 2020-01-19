@@ -2,14 +2,11 @@
 <% if(messages.error || messages.notice) { %>
 
   <!-- #2 -->
-  <div class="alert alert-<%= messages.error ? 'danger' : 'warning' %> alert-dismissible fade show" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <div>
     <% if(messages.error) { %>
 
       Validation errors:
-      <ul>
+      <ul style="background-color: lightsalmon; font-weight: bold; width: 30%; border-radius: 22px;">
         <!-- #3 -->
         <% messages.error.forEach((err) => { %>
           <li>
@@ -22,7 +19,7 @@
           <% }) %>
       </ul>
       <% } else { %>
-        <p>
+        <p style="background-color: lightsteelblue; font-weight: bold; width: 30%; border-radius: 22px;">
           <%= messages.notice %>
         </p>
         <% } %>
