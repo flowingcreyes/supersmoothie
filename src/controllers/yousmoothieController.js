@@ -1,7 +1,7 @@
-const strawberrySmoothieQueries = require("../db/queries.strawberrySmoothies.js");
-const bananaSmoothieQueries = require("../db/queries.bananaSmoothies.js");
-const blueberrySmoothieQueries = require("../db/queries.blueberrySmoothies.js");
-const pineappleSmoothieQueries = require("../db/queries.pineappleSmoothies.js");
+const strawberrySmoothieQueries = require("../db/queries.strawberrysmoothies.js");
+const bananaSmoothieQueries = require("../db/queries.bananasmoothies.js");
+const blueberrySmoothieQueries = require("../db/queries.blueberrysmoothies.js");
+const pineappleSmoothieQueries = require("../db/queries.pineapplesmoothies.js");
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
