@@ -26,21 +26,10 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+				<%- include ('../static/partials/header.ejs') %>
 
-							<!-- Logo -->
-								<a href="/" class="logo">
-									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">SuperSmoothie</span>
-								</a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+							
 				<%- include ('../static/partials/navbar.ejs') %>
 
 
@@ -64,37 +53,14 @@
 					</div>
 
 			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<section>
-						<h2>Get in touch</h2>
-						<form method="post" action="#">
-							Coming soon!
-						</form>
-					</section>
-					<section>
-						<h2>Share</h2>
-						<ul class="icons">
+			<%- include ('../static/partials/footer.ejs') %>
 
-							<li>							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
-								<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-							</li>
-						</ul>
-					</section>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
 
 	</div>
 
 <!-- Scripts -->
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/browser.min.js"></script>
-	<script src="../js/breakpoints.min.js"></script>
-	<script src="../js/util.js"></script>
-	<script src="../js/main.js"></script>
+<%- include ('../static/partials/scripts.ejs') %>
+
 
 </body>
 </html>
