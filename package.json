@@ -2,7 +2,7 @@
   "name": "supersmoothie",
   "version": "1.0.0",
   "description": "A web app that gives you a delicious smoothie recipe based on your favorite fruit!",
-  "main": "src/server.js",
+  "main": "",
   "scripts": {
     "test": "set NODE_ENV=test&& jasmine",
     "start": "node src/server.js"
