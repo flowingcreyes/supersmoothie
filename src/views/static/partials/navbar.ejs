@@ -1,48 +1,19 @@
-<nav class="navigation dropdown dropbtn">
-  <a href="/">
-Home
-</a>
-</nav>
-
-<nav class="navigation dropdown dropbtn">
-  <a href="/yousmoothie">
-YouSmoothie
-</a>
-</nav>
-
-<nav class="navigation">
-  <div class="dropdown">
-    <button class="dropbtn">SmoothieShare</button>
-    <div class="dropdown-content">
-      <% if(currentUser) { %>
-        <ul>
-          <li>
-            <a href="/smoothieshare">
-        SmoothieShare
-      </a>
-
-          </li>
-          <li>
-            <a href="/smoothieshare/signout">Sign out</a>
-          </li>
-        </ul>
-        <% } else { %>
-          <ul>
-            <li>
-              <a href="/smoothieshare">
-          SmoothieShare
-          </a>
-
-            </li>
-            <li>
-              <a href="/smoothieshare/signup">Sign up</a>
-            </li>
-            <li>
-              <a href="/smoothieshare/signin">Sign in</a>
-            </li>
-
-          </ul>
-          <% }%>
-    </div>
-  </div>
+<!-- Menu -->
+<nav id="menu">
+	<h2>Menu</h2>
+	<ul>
+			<% if (currentUser) {%>
+			<li><a href="/">Home</a></li>
+		<li><a href="/yousmoothie">YouSmoothie</a></li>
+		<li><a href="/smoothieshare">SmoothieShare</a></li>
+		<li><a href="/smoothieshare/signout">Sign Out</a></li>
+			<% } %>
+	 <% if (!currentUser) {%>
+		<li><a href="/">Home</a></li>
+		<li><a href="/yousmoothie">YouSmoothie</a></li>
+		<li><a href="/smoothieshare">SmoothieShare</a></li>
+		<li><a href="/smoothieshare/signup">Create SmoothieShare Account</a></li>
+		<li><a href="/smoothieshare/signin">Sign In</a></li>
+		<% } %>
+	</ul>
 </nav>

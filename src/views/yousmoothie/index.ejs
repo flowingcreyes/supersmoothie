@@ -1,41 +1,130 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	SuperSmoothie by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+	<head>
+		<title>SuperSmoothie</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<head>
-  <%- include ('../static/partials/head.ejs') %>
-  <%- include ('../static/partials/yousmoothiehead.ejs')  %>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-</head>
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">SuperSmoothie</span>
+								</a>
 
-<body>
-  <header>
-    <a href="/">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+				<%- include ('../static/partials/navbar.ejs') %>
 
-    <h1 class="title">Super Smoothie</h1>
-  </a>
 
-    <nav>
-      <% include ../static/partials/navbar.ejs %>
-    </nav>
 
-    <div class="smaller-title">
-      YouSmoothie
-    </div>
-  </header>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>YouSmoothie</h1>
+							<span class="image main"></span>
+							<div class="inner">
+								<header>
+									<h3>Choose your favorite fruit!</h3>
+								</header>
+								<section class="tiles">
+									<article class="style1">
+										<span class="image">
+											<img src="images/bananas.jpg" alt="" />
+										</span>
+										<a href="/yousmoothie/banana">
+											<h1>Banana</h1>
+											<div class="content">
+												<p>Four delicious recipes</p>
+											</div>
+										</a>
+									</article>
+									<article class="style2">
+										<span class="image">
+											<img src="images/pineapples.jpg" alt="" />
+										</span>
+										<a href="/yousmoothie/pineapple">
+											<h1>Pineapple</h1>
+											<div class="content">
+												<p>Four delicious recipes</p>
+											</div>
+										</a>
+									</article>
+									<article class="style3">
+										<span class="image">
+											<img src="images/blueberries.jpg" alt="" />
+										</span>
+										<a href="/yousmoothie/blueberry">
+											<h1>Blueberry</h1>
+											<div class="content">
+												<p>Four delicious recipes</p>
+											</div>
+										</a>
+									</article>
+									<article class="style4">
+										<span class="image">
+											<img src="images/strawberries.jpg" alt="" />
+										</span>
+										<a href="/yousmoothie/strawberry">
+											<h1>Strawberry</h1>
+											<div class="content">
+												<p>Four delicious recipes</p>
+											</div>
+										</a>
+									</article>
+								</section>
+						</div>
+					</div>
 
-  <div class="fruits">
-    <a class="blueberry" href="/yousmoothie/blueberry">
-    </a>
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<form method="post" action="#">
+							Coming soon!
+						</form>
+					</section>
+					<section>
+						<h2>Share</h2>
+						<ul class="icons">
 
-    <a class="banana" href="/yousmoothie/banana">
-    </a>
+							<li>							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
+								<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
 
-    <a class="strawberry" href="/yousmoothie/strawberry">
-    </a>
+	</div>
 
-    <a class="pineapple" href="/yousmoothie/pineapple">
-    </a>
-  </div>
+<!-- Scripts -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/browser.min.js"></script>
+	<script src="../js/breakpoints.min.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/main.js"></script>
+
 </body>
-
 </html>

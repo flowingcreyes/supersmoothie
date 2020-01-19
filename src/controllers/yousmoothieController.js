@@ -7,7 +7,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = {
   index(req, res, next) {
-    res.render("yousmoothie/index");
+    res.render("yousmoothie/index.ejs");
   },
 
   blueberry(req, res, next) {

@@ -1,49 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	SuperSmoothie by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+	<head>
+		<title>SuperSmoothie</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+		<style>
+			  img {
+				  height: 25%;
+				  width: 29%;
+				  border-radius: 22px;
+			  }
+			  section, p {
+				  font-weight: bold;
+			  }
+			  </style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<head>
-  <%- include ('../static/partials/head.ejs') %>
-    <link rel="stylesheet" type="text/css" href="../css/smoothiesharehead.css">
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-</head>
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">SuperSmoothie</span>
+								</a>
 
-<body>
-  <%- include ('../static/partials/messages.ejs')  %>
-  <%- include ('../static/partials/navbar.ejs')  %>
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+				<%- include ('../static/partials/navbar.ejs') %>
 
-    <header>
-      <a href="/">
 
-      <h1 class="title">Super Smoothie</h1>
-    </a>
 
-      <% include ../static/partials/navbar.ejs %>
-        <div class="smaller-title">
-          SmoothieShare
-        </div>
-    </header>
-    <div class="smoothieshow">
-      <h1>
-        <%=subject.title %>
-      </h1>
-      <br>
-      <br>
-      <p>
-        <%- subject.description %>
-      </p>
-      <p style="font-weight: bold;">
-        <% if(currentUser) {%>
-          >posted by Member
-          <%= subject.userId %>
-            <% }%>
-      </p>
-    </div>
-    <% if(currentUser && (currentUser.id === subject.userId || currentUser.isAdmin())) { %>
-      <a class="edit_subject" href="/smoothieshare/<%= subject.id %>/edit">Edit</a>
-      <form action="/smoothieshare/<%= subject.id %>/destroy" method="post">
-        <button type="submit" class="delete_subject">Delete</button>
-      </form>
-      <% } %>
+				<!-- Main -->
+					<div id="main">
+            <h1>
+              <%=subject.title %>
+            </h1>
+            <br>
+            <br>
+            <p>
+              <%- subject.description %>
+            </p>
+            <p style="font-weight: bold;">
+              <% if(currentUser) {%>
+                
+                posted by: <%= currentUser.email %>
+                  <% }%>
+            </p>
+					</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch</h2>
+						<form method="post" action="#">
+							Coming soon!
+						</form>
+					</section>
+					<section>
+						<h2>Share</h2>
+						<ul class="icons">
+
+							<li>							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
+								<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</div>
+
+<!-- Scripts -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/browser.min.js"></script>
+	<script src="../js/breakpoints.min.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/main.js"></script>
+
 </body>
-
 </html>

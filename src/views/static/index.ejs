@@ -1,72 +1,220 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	SuperSmoothie by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+	<head>
+		<title>SuperSmoothie</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<head>
-  <% include ./partials/head.ejs %>
-</head>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-<body>
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">SuperSmoothie</span>
+								</a>
 
-  <main>
-    <header>
-      <a href="/">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
-      <h1 class="title">Super Smoothie</h1>
-    </a>
-      <% include ./partials/navbar.ejs %>
-      <% include ./partials/messages.ejs %>
-    </header>
-    <div class="yousmoothie">
-      <section class="yousmoothie_title">
-        YouSmoothie
-      </section>
+						</div>
+					</header>
 
-      <section class="yousmoothie_description">
-        Pick a fruit. Any fruit. We'll grab for you a healthy smoothie recipe based on your favorite fruit!
-      </section>
-      <a href="/yousmoothie">
-        <div class="yousmoothie_button">
-          Create Smoothie
-        </div>
-      </a>
-    </div>
+				<%- include ('../static/partials/navbar.ejs') %>
 
-    <div class="smoothiemonth">
-      <section class="smoothiemonth_title" style="text-align:center;">
-Smoothie of the Month
-      </section>
-      <br>
-      <section class="smoothie_name" style="text-align:center;font-size:18px;font-weight: bold;">
-        Chocolate Blueberry Smoothie
-      </section>
 
-      <section class="smoothie_image">
-        <img src="../image/blueberrySmoothie4.jpg" style=" border-radius: 10px;height: 10%;width: 50%;position:relative;top : 10px;left : 22%;" class="smoothie_image" alt="smoothie image">
-      </section>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>This is SuperSmoothie, a place for you to enjoy our handpicked smoothie recipes and share with other users<br />
+								</h1>
+								<h3>Enjoy over 12 unique and delicious smoothie recipes and talk with other SuperSmoothie users on our forum!</h3>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="../images/pic01.jpg" alt="" />
+									</span>
+									<a href="/yousmoothie">
+										<h2>YouSmoothie</h2>
+										<div class="content">
+											<p>Pick a fruit. Any fruit. We'll grab for you a healthy smoothie recipe based on your favorite fruit!</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="../images/pic02.jpg" alt="" />
+									</span>
+									<a href="/smoothieshare">
+										<h2>SmoothieShare</h2>
+										<div class="content">
+											<p>Create a SmoothieShare account! You can post your own smoothie recipes and browse other users' smoothies!</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Coming Soon</h2>
+										<div class="content">
+											<p>Check back for new features</p>
+										</div>
+									</a>
+								</article>
+							<!--	<article class="style4">
+									<span class="image">
+										<img src="images/pic04.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Tempus</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic05.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Aliquam</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Veroeros</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic07.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Ipsum</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic08.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Dolor</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic09.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Nullam</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Ultricies</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic11.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Dictum</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic12.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Pretium</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article> -->
+							</section>
+						</div>
+					</div>
 
-    </div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									Coming soon!
+								</form>
+							</section>
+							<section>
+								<h2>Share</h2>
+								<ul class="icons">
+		
+									<li>							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
+										<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+									</li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
 
-    <div class="smoothieshare">
-      <section class="smoothieshare-title">
-        SmoothieShare
-      </section>
+			</div>
 
-      <div class="smoothieshare-description">
-        Create a SmoothieShare account! You can post your own smoothie recipes and browse other users' smoothies!
-      </div>
+		<!-- Scripts -->
+			<script src="../js/jquery.min.js"></script>
+			<script src="../js/browser.min.js"></script>
+			<script src="../js/breakpoints.min.js"></script>
+			<script src="../js/util.js"></script>
+			<script src="../js/main.js"></script>
 
-      <div class="smoothieshare-button">
-        <a href="/smoothieshare/signup">
-          Create Account
-        </a>
-      </div>
-    </div>
-
-  </main>
-  <div class="tweet_button">
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="I love #supersmoothies! the best smoothies i've ever seen! #fitness #health #smoothies #yum" data-lang="en" data-show-count="false">Tweet</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</body>
-
+	</body>
 </html>
