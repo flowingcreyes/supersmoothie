@@ -65,7 +65,7 @@ module.exports = {
     const msg = {
       to: email,
       from: "supersmoothie@dontreply.com",
-      subject: "Super Smoothie",
+      subject: "SuperSmoothie",
       text: "Text",
       html: `
       <h2><strong>Smoothie Name:</strong> ${name}</h2><br><br>
