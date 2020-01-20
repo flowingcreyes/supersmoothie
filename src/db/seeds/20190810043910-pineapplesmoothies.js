@@ -7,8 +7,8 @@ let pineappleSmoothies = [{
   recipe: 'Place the pineapple juice, banana, frozen pineapple and vanilla Greek yogurt in a blender. Blend until smooth. Pour into 2 glasses. Garnish with pineapple wedges and mint sprigs if desired.',
   calories: '170 calories per cup',
   source: '../../images/pineappleSmoothie1.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
  },
  {
   id: 2,
@@ -17,8 +17,8 @@ let pineappleSmoothies = [{
   recipe: 'In a blender, puree 1 sliced frozen banana, 1 cup frozen pineapple chunks, 1 tbsp. unsweetened cocoa powder, 1 chopped pitted date, and 1/2 cup almond milk. Top with black or white chia seeds, sliced strawberries, and cacao nibs.',
   calories: 'N/A',
   source: '../../images/pineappleSmoothie2.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
  },
  {
   id: 3,
@@ -27,8 +27,8 @@ let pineappleSmoothies = [{
   recipe: 'Place the above ingredients in a blender and blend until smooth. Add more milk if too thick or ice if too thin.',
   calories: 'N/A',
   source: '../../images/pineappleSmoothie3.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
  },
  {
   id: 4,
@@ -37,8 +37,8 @@ let pineappleSmoothies = [{
   recipe: 'Combine everything in the blender and serve! Would be great as a tropical cocktail using some coconut rum!',
   calories: '140 calories per cup',
   source: '../../images/pineappleSmoothie4.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
 },
 {
   id: 5, name: 'Refreshing Watermelon Pineapple Smoothie', ingredients: '1/2 cup frozen pineapple chunks, 1/2 cup frozen raspberries, 3/4 cup fresh diced seedless watermelon, 1/4 cup Almond Breeze Almondmilk Unsweetened Vanilla', recipe: "In a blender, place all ingredients together and blend until smooth. If necessary add in more almond milk just a tablespoon or two at a time until you get a nice thick smoothie consistency. Pour into a chilled glass or into a pineapple that's been carved in the middle.", calories: '145 calories per cup', source: '../../images/pineappleSmoothie5.jpg', createdAt: '8/11/19', updatedAt: '8/11/19'

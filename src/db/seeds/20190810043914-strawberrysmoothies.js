@@ -7,8 +7,8 @@ let strawberrySmoothies = [{
   recipe: 'Place ingredients in blender in the order written. Puree until smooth, add a bit more milk or water if the smoothie is too thick to blend. Taste and add a bit of honey if desired to sweeten.',
   calories: '200 calories per cup',
   source: '../../images/strawberrySmoothie1.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
  },
  {
   id: 2,
@@ -17,8 +17,8 @@ let strawberrySmoothies = [{
   recipe: 'In a blender combine strawberries, milk, yogurt, sugar, and vanilla. Toss in the ice. Blend until smooth and creamy. Pour into glasses and serve.',
   calories: '160 calories per cup',
   source: '../../images/strawberrySmoothie2.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
  },
  {
   id: 3,
@@ -27,8 +27,8 @@ let strawberrySmoothies = [{
   recipe: 'Blend ingredients until smooth and serve immediately.',
   calories: '120 calories per cup',
   source: '../../images/strawberrySmoothie3.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
  },
  {
   id: 4,
@@ -37,8 +37,8 @@ let strawberrySmoothies = [{
   recipe: 'Place all ingredients in a blender (or Bullet, food processor, etc.) and blend until smooth. Pour into a glass and top with sliced fresh strawberries, if desired. Enjoy immediately!',
   calories: 'N/A',
   source: '../../images/strawberrySmoothie4.jpg',
-  createdAt: '8/9/19',
-  updatedAt: '8/9/19'
+  createdAt: '1/19/20',
+  updatedAt: '1/19/20'
 },
 {
   id: 5, name: 'Strawberry Mint Smoothie', ingredients: '8 ounces strawberries (hulled and frozen), 1/2 cup vanilla yogurt, 1 cup milk (skim, reduced fat, or whole), 1 tablespoon honey, 10–12 leaves fresh mint)', recipe: 'Place all ingredients in a high powered blender. Process until fully blended and smooth. Taste test and adjust ingredients, if necessary. Pour into glasses and serve immediately.', calories:  'N/A', source: '../../images/strawberrySmoothie5.jpg', createdAt:  '8/11/19', updatedAt: '8/11/19'

@@ -12,7 +12,6 @@ module.exports = {
     app.set("views", viewsFolder);
     app.set("view engine", "ejs");
     app.use(bodyParser.urlencoded({ extended: true }));
-    app.use(express.static(path.join(__dirname, "..", "assets")));
     app.use(expressValidator());
     app.use(
       session({
@@ -20,7 +19,7 @@ module.exports = {
         resave: false,
         saveUninitialized: false,
         cookie: {
-          maxAge: 1.21e9
+          maxAge: 1.21e+9
         }
       })
     );
@@ -30,5 +29,6 @@ module.exports = {
       res.locals.currentUser = req.user;
       next();
     });
+    app.use(express.static(path.join(__dirname, "..", "assets")));
   }
 };
