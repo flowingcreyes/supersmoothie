@@ -5,63 +5,63 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>SuperSmoothie</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../css/main.css" />
-		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
-		<style>
-			  img {
-				  height: 25%;
-				  width: 29%;
-				  border-radius: 22px;
-			  }
-			  section, p {
-				  font-weight: bold;
-			  }
-			  </style>
-	</head>
-	<body class="is-preload">
-		<%- include ('../static/partials/messages.ejs') %>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+  <title>SuperSmoothie</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+  <style>
+    img {
+      height: 25%;
+      width: 29%;
+      border-radius: 22px;
+    }
 
-				<%- include ('../static/partials/header.ejs') %>
+    section,
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
 
-							
-				<%- include ('../static/partials/navbar.ejs') %>
+<body class="is-preload">
+  <%- include ('../static/partials/messages.ejs') %>
 
+    <!-- Wrapper -->
+    <div id="wrapper">
 
+      <%- include ('../static/partials/header.ejs') %>
 
-				<!-- Main -->
-					<div id="main">
+        <%- include ('../static/partials/navbar.ejs') %>
+
+          <!-- Main -->
+          <div id="main">
             <form action="/users/signin" method="post">
               <div class="email">
                 <label for="email">Email</label>
-      
+
                 <input class="email_class" type="email" name="email" placeholder="Enter email">
               </div>
               <div class="password">
-      
+
                 <label for="password">Password</label>
                 <input class="password_class" type="password" name="password" placeholder="Enter password">
               </div>
               <button class="signin" type="submit">Sign in</button>
           </div>
           </form>
-					</div>
+    </div>
 
-			<!-- Footer -->
-			<%- include ('../static/partials/footer.ejs') %>
+    <!-- Footer -->
+    <%- include ('../static/partials/footer.ejs') %>
 
+      </div>
 
-	</div>
-
-<!-- Scripts -->
-<%- include ('../static/partials/scripts.ejs') %>
-
+      <!-- Scripts -->
+      <%- include ('../static/partials/scripts.ejs') %>
 
 </body>
+
 </html>

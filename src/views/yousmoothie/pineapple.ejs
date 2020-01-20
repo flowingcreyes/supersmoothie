@@ -5,102 +5,111 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>SuperSmoothie</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../css/main.css" />
-		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
-		<style>
-      body{
-      background-color:  #f0de7d;
-      }
-		img {
-			 height: 23%;
-				  width: 25%;
-			border-radius: 22px;
-		}
-		section, p {
-			font-weight: bold;
-		}
-		#main{
-				  text-align: center;
-			  }
-			  #refresh{
-				  height: 3%;
-				  width: 4%;
-			  }
-		</style>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<%- include ('../static/partials/header.ejs') %>
+<head>
+  <title>SuperSmoothie</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+  <style>
+    body {
+      background-color: #f0de7d;
+    }
 
-				<%- include ('../static/partials/navbar.ejs') %>
+    img {
+      height: 23%;
+      width: 25%;
+      border-radius: 22px;
+    }
 
+    section,
+    p {
+      font-weight: bold;
+    }
 
+    #main {
+      text-align: center;
+    }
 
-				<!-- Main -->
-					<div id="main">
-						<script>
-							function notice() {
-							  alert("Your smoothie recipe has been delivered to your inbox!!")
-							}
-						  </script>
-						<div class="inner">
-							<h1>YouSmoothie</h1>
-							<span class="image main"></span>
-							<div class="inner">
-								<header>
-									<h2> <%= pineappleSmoothies.name %> <a href="/yousmoothie/pineapple"><img id="refresh" src="/images/refresh-button.png" alt="refresh button" /></a> </h2>
-								</header>
-								<section>
+    #refresh {
+      height: 3%;
+      width: 4%;
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <%- include ('../static/partials/header.ejs') %>
+
+        <%- include ('../static/partials/navbar.ejs') %>
+
+          <!-- Main -->
+          <div id="main">
+            <script>
+              function notice() {
+                alert("Your smoothie recipe has been delivered to your inbox!!")
+              }
+            </script>
+            <div class="inner">
+              <h1>YouSmoothie</h1>
+              <span class="image main"></span>
+              <div class="inner">
+                <header>
+                  <h2>
+                    <%= pineappleSmoothies.name %> <a href="/yousmoothie/pineapple"><img id="refresh" src="/images/refresh-button.png" alt="refresh button" /></a> </h2>
+                </header>
+                <section>
                   <p>
                     <img src=<%=pineappleSmoothies.source %> alt="pineapple smoothie image">
 
                   </p>
                   <p>
-                    <h3>INGREDIENTS:</h3><%= pineappleSmoothies.ingredients %>
-					
-				</p>
-				-
-                  <p>
-                    <h3>RECIPE:</h4><%= pineappleSmoothies.recipe %>
+                    <h3>INGREDIENTS:</h3>
+                    <%= pineappleSmoothies.ingredients %>
 
-				  </p>
-				  -
+                  </p>
+                  -
+                  <p>
+                    <h3>RECIPE:</h4>
+                      <%= pineappleSmoothies.recipe %>
+
+                  </p>
+                  -
 
                   <p>
-                    <h3>CALORIES:</h3><%= pineappleSmoothies.calories %>
-				  </p>
-				  -
-				  <form action="/yousmoothie/smoothieemail" id="email_form" method="post" target="hiddenFrame">
-					send this smoothie to your email:
-					<input id="email" type="email" name="emailaddress">
-					<input id="smoothie_name" name="smoothie_name" value="<%= pineappleSmoothies.name %>" type="hidden">
-					<input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= pineappleSmoothies.ingredients %>" type="hidden">
-					<input id="smoothie_recipe" name="smoothie_recipe" value="<%= pineappleSmoothies.recipe %>" type="hidden">
-					<input id="smoothie_calories" name="smoothie_calories" value="<%= pineappleSmoothies.calories %>" type="hidden">
-					<input id="email_button" type="submit" onclick="notice()">
-				  </form>
+                    <h3>CALORIES:</h3>
+                    <%= pineappleSmoothies.calories %>
+                  </p>
+                  -
+                  <form action="/yousmoothie/smoothieemail" id="email_form" method="post" target="hiddenFrame">
+                    send this smoothie to your email:
+                    <input id="email" type="email" name="emailaddress">
+                    <input id="smoothie_name" name="smoothie_name" value="<%= pineappleSmoothies.name %>" type="hidden">
+                    <input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= pineappleSmoothies.ingredients %>" type="hidden">
+                    <input id="smoothie_recipe" name="smoothie_recipe" value="<%= pineappleSmoothies.recipe %>" type="hidden">
+                    <input id="smoothie_calories" name="smoothie_calories" value="<%= pineappleSmoothies.calories %>" type="hidden">
+                    <input id="email_button" type="submit" onclick="notice()">
+                  </form>
                 </section>
-						</div>
-					</div>
+              </div>
+            </div>
 
-			<!-- Footer -->
-			<%- include ('../static/partials/footer.ejs') %>
+            <!-- Footer -->
+            <%- include ('../static/partials/footer.ejs') %>
 
+          </div>
 
-	</div>
+          <!-- Scripts -->
+          <%- include ('../static/partials/scripts.ejs') %>
 
-<!-- Scripts -->
-<%- include ('../static/partials/scripts.ejs') %>
-
-<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+            <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
 </body>
+
 </html>

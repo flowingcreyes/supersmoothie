@@ -5,75 +5,84 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>SuperSmoothie</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../css/main.css" />
-		<noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
-		<style>
-			  img {
-				  height: 25%;
-				  width: 29%;
-				  border-radius: 22px;
-			  }
-			  section, p {
-				  font-weight: bold;
-        }
-        .smoothieshare_index{
-          background-color: #d8e3dc;;
-        }
-		#main  {
-			background-color: lightskyblue;
-			text-align: center;
-		}
-			  </style>
-	</head>
-	<body class="is-preload">
-		<%- include ('../static/partials/messages.ejs') %>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+  <title>SuperSmoothie</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+  <style>
+    img {
+      height: 25%;
+      width: 29%;
+      border-radius: 22px;
+    }
 
-				<%- include ('../static/partials/header.ejs') %>
+    section,
+    p {
+      font-weight: bold;
+    }
 
-											<%- include ('../static/partials/navbar.ejs') %>
+    .subject_title {
+      background-color: lightskyblue;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    #main {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <%- include ('../static/partials/messages.ejs') %>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <%- include ('../static/partials/header.ejs') %>
+
+        <%- include ('../static/partials/navbar.ejs') %>
+
+          <!-- Main -->
+          <div id="main">
+            <h1>SmoothieShare</h1>
+
             <div>
-            <% if(currentUser) { %>
-              <a href="smoothieshare/new">
+              <% if(currentUser) { %>
+                <a href="smoothieshare/new">
                 <button class="post_recipe">Post Smoothie</button>
             </a>
-              <% } %>
+                <% } %>
             </div>
-              <br>
-              <div class="smoothieshare_index">
-                <div class="subject_title">
-                  <ul>
+            <br>
+            <div class="smoothieshare_index">
+
+              <div class="subject_title">
+                <ul>
                   <% subjectItem.forEach((subject) => { %>
-                      <li>
+                    <li>
                       <a href="/smoothieshare/<%= subject.id %>">
-                   <p><%= subject.title %></p> 
-                  </a>
-                </li>
+                        <p>
+                          <%= subject.title %>
+                        </p>
+                      </a>
+                    </li>
                     <% }) %>
-                  </ul>
+                </ul>
 
-                </div>
               </div>
-					</div>
+            </div>
+          </div>
 
-			<!-- Footer -->
-			<%- include ('../static/partials/footer.ejs') %>
+          <!-- Footer -->
+          <%- include ('../static/partials/footer.ejs') %>
 
+    </div>
 
-	</div>
-
-<!-- Scripts -->
-<%- include ('../static/partials/scripts.ejs') %>
-
+    <!-- Scripts -->
+    <%- include ('../static/partials/scripts.ejs') %>
 
 </body>
+
 </html>
