@@ -16,13 +16,20 @@
       background-color:  #ebb7b7;
       }
 		img {
-			height: 25%;
-			width: 29%;
+			 height: 23%;
+				  width: 25%;
 			border-radius: 22px;
 		}
 		section, p {
 			font-weight: bold;
 		}
+		#main{
+				  text-align: center;
+			  }
+			  #refresh{
+				  height: 3%;
+				  width: 4%;
+			  }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -38,12 +45,17 @@
 
 				<!-- Main -->
 					<div id="main">
+						<script>
+							function notice() {
+							return  alert("Your smoothie recipe has been delivered to your inbox!!")
+							}
+						  </script>
 						<div class="inner">
 							<h1>YouSmoothie</h1>
 							<span class="image main"></span>
 							<div class="inner">
 								<header>
-									<h2> <%= strawberrySmoothies.name %>  </h2>
+									<h2> <%= strawberrySmoothies.name %>  <a href="/yousmoothie/strawberry"><img id="refresh" src="/images/refresh-button.png" alt="refresh button" /></a></h2>
 								</header>
 								<section>
                   <p>
@@ -72,7 +84,7 @@
 					<input id="smoothie_ingredients" name="smoothie_ingredients" value="<%= strawberrySmoothies.ingredients %>" type="hidden">
 					<input id="smoothie_recipe" name="smoothie_recipe" value="<%= strawberrySmoothies.recipe %>" type="hidden">
 					<input id="smoothie_calories" name="smoothie_calories" value="<%= strawberrySmoothies.calories %>" type="hidden">
-					<input id="email_button" type="submit">
+					<input id="email_button" type="submit" onclick="notice()">
 				  </form>
                 </section>
 						</div>
@@ -86,6 +98,7 @@
 
 <!-- Scripts -->
 <%- include ('../static/partials/scripts.ejs') %>
+<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
 </body>
 </html>

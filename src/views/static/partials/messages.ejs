@@ -6,7 +6,7 @@
     <% if(messages.error) { %>
 
       Validation errors:
-      <ul style="background-color: lightsalmon; font-weight: bold; width: 30%; border-radius: 22px;">
+      <ul style="background-color: lightsalmon; font-weight: bold; width: 30%; border-radius: 22px; text-align: center;">
         <!-- #3 -->
         <% messages.error.forEach((err) => { %>
           <li>
@@ -19,7 +19,7 @@
           <% }) %>
       </ul>
       <% } else { %>
-        <p style="background-color: lightsteelblue; font-weight: bold; width: 30%; border-radius: 22px;">
+        <p style="background-color: lightskyblue; font-weight: bold; width: 30%; border-radius: 22px; text-align: center;">
           <%= messages.notice %>
         </p>
         <% } %>

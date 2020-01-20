@@ -61,7 +61,7 @@ module.exports = {
     let ingredients = req.body.smoothie_ingredients;
     let recipe = req.body.smoothie_recipe;
     let calories = req.body.smoothie_calories;
-    let image = req.body.smoothie_image;
+    //let image = req.body.smoothie_image;
     const msg = {
       to: email,
       from: "supersmoothie@dontreply.com",
@@ -74,8 +74,9 @@ module.exports = {
     <h2><strong>Calories:</strong> ${calories}</h2><br><br>
                 `
     };
-    sgMail.send(msg).catch(err => {
+    return sgMail.send(msg).catch(err => {
       console.log(err);
     });
+  
   }
 };
