@@ -77,6 +77,5 @@ module.exports = {
     return sgMail.send(msg).catch(err => {
       console.log(err);
     });
-  
   }
 };

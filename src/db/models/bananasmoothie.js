@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  bananaSmoothie.associate = function(models) {
-  };
+  bananaSmoothie.associate = function(models) {};
   return bananaSmoothie;
 };

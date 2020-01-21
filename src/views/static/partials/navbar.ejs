@@ -1,27 +1,27 @@
 <!-- Nav -->
 <nav>
 	<ul>
-		<li><a href="#menu">Menu</a></li>
+	  <li><a href="#menu">Menu</a></li>
 	</ul>
-</nav>
-<!-- Menu -->
-<nav id="menu">
+  </nav>
+  <!-- Menu -->
+  <nav id="menu">
 	<h2>Menu</h2>
 	<ul>
-			<% if (currentUser) {%>
-			<li><a href="/">Home</a></li>
-		<li><a href="/yousmoothie">YouSmoothie</a></li>
-		<li><a href="/smoothieshare">SmoothieShare</a></li>
-		<li><a href="/smoothieshare/signout">Sign Out</a></li>
-			<% } %>
-	 <% if (!currentUser) {%>
+	  <% if (currentUser) {%>
 		<li><a href="/">Home</a></li>
 		<li><a href="/yousmoothie">YouSmoothie</a></li>
 		<li><a href="/smoothieshare">SmoothieShare</a></li>
-		<li><a href="/smoothieshare/signup">Create SmoothieShare Account</a></li>
-		<li><a href="/smoothieshare/signin">Sign In</a></li>
+		<li><a href="/smoothieshare/signout">Sign Out</a></li>
 		<% } %>
+		  <% if (!currentUser) {%>
+			<li><a href="/">Home</a></li>
+			<li><a href="/yousmoothie">YouSmoothie</a></li>
+			<li><a href="/smoothieshare">SmoothieShare</a></li>
+			<li><a href="/smoothieshare/signup">Create SmoothieShare Account</a></li>
+			<li><a href="/smoothieshare/signin">Sign In</a></li>
+			<% } %>
 	</ul>
-</nav>
-</div>
-</header>
+  </nav>
+  </div>
+  </header>
