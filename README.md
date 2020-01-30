@@ -10,6 +10,7 @@ SuperSmoothie is a smoothie generator and forum for users to get quality and del
 ---
 **STEPS**
 
+(configure database permissions in db/config)
 1. npm install
 2. npm start
 3. go to localhost:3000
