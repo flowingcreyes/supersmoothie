@@ -14,8 +14,7 @@ SuperSmoothie is a smoothie generator and forum for users to get quality and del
 
 (add megasecret, cookieSecret, API keys in a .env)
 
-(run --> sequelize db:migrate && sequelize db:migrate --env test)
-
 1. npm install
-2. npm start
-3. go to localhost:3000
+2. run: sequelize db:migrate && sequelize db:migrate --env test
+3. npm start
+4. go to localhost:3000
